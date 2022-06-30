@@ -1,6 +1,7 @@
 // Éstas funciones llevan a cabo la comunicación con la base de datos
 export const getAllServices = async () => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND}/services`);
+  const response = await fetch('http://localhost:4000/services');
+
   const { data } = await response.json();
 
   if (!response.ok) {

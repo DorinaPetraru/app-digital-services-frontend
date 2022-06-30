@@ -9,10 +9,9 @@ export const Service = ({ service }) => {
       <p>Descripción del servicio: {service.description}</p>
 
       {service.file ? (
-        <img
-          src={`${process.env.REACT_APP_BACKEND}/uploads/${service.file}`}
-          alt={service.title}
-        />
+        <a href={`http://localhost:4000/${service.file}`} download>
+          Descargar archivo
+        </a>
       ) : null}
 
       <p>Estatus del servicio: {service.statusService}</p>
