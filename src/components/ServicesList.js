@@ -1,11 +1,11 @@
-import { Service } from './Service';
+import { OneService } from './OneService';
 
 export const ServicesList = ({ services }) => {
   return services.length ? (
     <ul>
       {services.map((service) => (
         <li key={service.id}>
-          <Service service={service} />
+          <OneService service={service} />
         </li>
       ))}
     </ul>

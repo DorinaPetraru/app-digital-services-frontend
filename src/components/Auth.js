@@ -1,9 +1,15 @@
-/* import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext"; */
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { TokenContext } from '../context/TokenContext';
 
 export const Auth = () => {
-  return (
+  const { user, logout } = useContext(TokenContext);
+
+  return user ? (
+    <p>
+      Logged in as {user.email} <button onClick={() => logout()}>Logout</button>
+    </p>
+  ) : (
     <ul>
       <li>
         <Link to='/users'>Register</Link>
