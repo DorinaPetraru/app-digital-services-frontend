@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <h1>
-        <Link to='/'>Logo Digital Service</Link>
+        <Link to='/'>aqui logo</Link>
       </h1>
       <p>Este es el Header</p>
 

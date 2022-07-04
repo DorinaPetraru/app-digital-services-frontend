@@ -7,14 +7,17 @@ export const Auth = () => {
 
   return user ? (
     <p>
-      Logged in as {user.email} <button onClick={() => logout()}>Logout</button>
+      Hi, {user.name}
+      <button className='ButtonLogoutHeader' onClick={() => logout()}>
+        Logout
+      </button>
     </p>
   ) : (
     <ul>
-      <li>
+      <li className='ButtonRegisterHeader'>
         <Link to='/users'>Register</Link>
       </li>
-      <li>
+      <li className='ButtonLoginHeader'>
         <Link to='/login'>Login</Link>
       </li>
     </ul>

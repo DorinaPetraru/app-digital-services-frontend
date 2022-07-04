@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: #3d7586;
+  --granate-color: #6c233c;
+  --yellow-color: #de8e02;
+  --grey-color: #b2b6bd;
+  --write-color: #fffce8;
+}
+
+p.Error {
+  color: var(--granate-color);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,47 +28,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-.registerPageCss,
-.loginPageCss {
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-form > h1 {
-  text-align: center;
-  font-weight: 500;
-}
-
-form {
-  position: relative;
-  margin: 1rem;
-}
-
-input,
-textarea {
-  display: block;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid rgb(23, 77, 75);
-  padding: 0.5rem;
-  font-size: 0.8rem;
-}
-
-fieldset {
-  border: none;
-}
-form > button {
-  border: none;
-  display: block;
-  width: 80%;
-  margin: 0.3rem auto;
-  color: #fffce8;
-  background-color: #0b7a75;
-  height: 3rem;
-  border-radius: 10px;
-  font-size: 1.5rem;
 }

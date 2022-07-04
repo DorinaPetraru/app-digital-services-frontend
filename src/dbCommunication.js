@@ -86,6 +86,18 @@ export const getOwnUser = async ({ token }) => {
   return data;
 };
 
+export const getUser = async (id) => {
+  const response = await fetch(`http://localhost:4000/users/${id}`);
+
+  const { data } = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message);
+  }
+
+  return data;
+};
+
 export const createNewService = async ({
   title,
   description,

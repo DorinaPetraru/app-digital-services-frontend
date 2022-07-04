@@ -1,3 +1,4 @@
+import './HomePage.css';
 import useServices from '../../hooks/useServices';
 import { ServicesList } from '../../components/ServicesList';
 import { ErrorMessage } from '../../components/ErrorMessage';
@@ -13,7 +14,7 @@ export const HomePage = () => {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <section>
+    <section className='sectionHomePage'>
       <h1>List services</h1>
 
       {user ? (

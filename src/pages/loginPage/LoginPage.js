@@ -1,3 +1,5 @@
+import './LoginPage.css';
+import '../../components/cssStyle/form.css';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TokenContext } from '../../context/TokenContext';
@@ -26,7 +28,7 @@ export const LoginPage = () => {
   };
 
   return (
-    <section className='loginPageCss'>
+    <section className='formLoginPage'>
       <form onSubmit={handleForm}>
         <h1>Login</h1>
         <fieldset>
@@ -53,7 +55,7 @@ export const LoginPage = () => {
           />
         </fieldset>
 
-        <button>Login</button>
+        <button className='ButtonLoginPage'>Login</button>
         {error ? <p>{error}</p> : null}
       </form>
     </section>

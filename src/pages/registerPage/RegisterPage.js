@@ -1,3 +1,5 @@
+import './RegisterPage.css';
+import '../../components/cssStyle/form.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../../dbCommunication';
@@ -31,13 +33,12 @@ export const RegisterPage = () => {
   };
 
   return (
-    <section className='registerPageCss'>
+    <section className='formRegisterPage'>
       <form method='post' onSubmit={handleForm}>
         <h1>Register</h1>
         <fieldset>
           <label htmlFor='name' className='formLabel'></label>
           <input
-            className='formControl'
             type='text'
             id='name'
             name='name'
@@ -47,9 +48,8 @@ export const RegisterPage = () => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='email' className='formLabel'></label>
+          <label htmlFor='email'></label>
           <input
-            className='formControl'
             type='email'
             id='email'
             name='email'
@@ -59,9 +59,8 @@ export const RegisterPage = () => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='biography' className='formLabel'></label>
+          <label htmlFor='biography'></label>
           <textarea
-            className='formControl'
             value={biography}
             id='biography'
             name='biography'
@@ -72,9 +71,8 @@ export const RegisterPage = () => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='photo' className='formLabel'></label>
+          <label htmlFor='photo'></label>
           <input
-            className='formControl'
             type='file'
             id='photo'
             name='photo'
@@ -84,9 +82,8 @@ export const RegisterPage = () => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor='password' className='formLabel'></label>
+          <label htmlFor='password'></label>
           <input
-            className='formControl'
             type='password'
             id='password'
             name='password'
@@ -96,7 +93,7 @@ export const RegisterPage = () => {
           />
         </fieldset>
 
-        <button>Register</button>
+        <button className='ButtonRegisterPage'>Register</button>
         {error ? <p>{error}</p> : null}
       </form>
     </section>

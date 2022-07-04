@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+//import { TokenContext } from '../context/TokenContext';
+//import { useContext } from 'react';
 
 export const OneService = ({ service }) => {
+  //const { user } = useContext(TokenContext);
   return (
     <article>
       <Link to={`/services/${service.id}`}>
@@ -17,7 +20,10 @@ export const OneService = ({ service }) => {
       <p>Estatus del servicio: {service.statusService}</p>
       <p>Id del Usuario: {service.idUser}</p>
 
-      <p>Fecha de creación: {new Date(service.createdAt).toLocaleString}</p>
+      {/* <p>
+        By <Link to={`/users/${user.id}`}>{user.name}</Link> on
+        {service.createdAt}
+      </p> */}
     </article>
   );
 };
