@@ -1,23 +1,30 @@
-import { useContext } from 'react';
+import { useToken } from './../context/TokenContext';
 import { Link } from 'react-router-dom';
-import { TokenContext } from '../context/TokenContext';
+import useOwnUser from '../hooks/useOwnUser';
 
 export const Auth = () => {
-  const { user, logout } = useContext(TokenContext);
+  const [token, setToken] = useToken();
 
-  return user ? (
+  const user = useOwnUser(token);
+
+  return token && user ? (
     <p>
-      Hi, {user.name}
-      <button className='ButtonLogoutHeader' onClick={() => logout()}>
-        Logout
-      </button>
+      <Link to={`/users/${user.id}`}>
+        {user.name}
+        <img
+          src={`http://localhost:4000/${user.photo}`}
+          alt='Profile'
+          width='40'
+        />
+      </Link>{' '}
+      <button onClick={() => setToken(null)}>Logout</button>
     </p>
   ) : (
     <ul>
-      <li className='ButtonRegisterHeader'>
+      <li>
         <Link to='/users'>Register</Link>
       </li>
-      <li className='ButtonLoginHeader'>
+      <li>
         <Link to='/login'>Login</Link>
       </li>
     </ul>

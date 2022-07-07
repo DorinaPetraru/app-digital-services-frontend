@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { getUser } from '../dbCommunication';
-
 const useUser = (id) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -12,7 +11,7 @@ const useUser = (id) => {
         setLoading(true);
         const data = await getUser(id);
 
-        setUser(data);
+        setUser(data.user);
       } catch (error) {
         setError(error.message);
       } finally {

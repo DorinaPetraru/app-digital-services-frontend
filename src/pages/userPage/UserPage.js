@@ -13,7 +13,16 @@ export const UserPage = () => {
 
   return (
     <section>
-      <h1>User page</h1>
+      <h1>Name: {user.name}</h1>
+      <p>Email: {user.email}</p>
+      <p>Biography: {user.biography}</p>
+      <img
+        src={`http://localhost:4000/${user.photo}`}
+        alt='Profile'
+        width='40'
+      />
+
+      <p>Photo: {user.photo}</p>
     </section>
   );
 };

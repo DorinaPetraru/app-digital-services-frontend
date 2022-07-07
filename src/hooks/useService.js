@@ -5,15 +5,15 @@ const useService = (id) => {
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-
   useEffect(() => {
     const loadService = async () => {
       try {
         setLoading(true);
 
-        const data = await getOneService();
+        const data = await getOneService(id);
 
-        setService(data);
+        setService(data.service);
+        console.log(data.service);
       } catch (error) {
         setError(error.message);
       } finally {

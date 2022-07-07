@@ -1,5 +1,4 @@
 import './RegisterPage.css';
-import '../../components/cssStyle/form.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../../dbCommunication';
@@ -37,7 +36,7 @@ export const RegisterPage = () => {
       <form method='post' onSubmit={handleForm}>
         <h1>Register</h1>
         <fieldset>
-          <label htmlFor='name' className='formLabel'></label>
+          <label htmlFor='name'></label>
           <input
             type='text'
             id='name'
@@ -76,7 +75,6 @@ export const RegisterPage = () => {
             type='file'
             id='photo'
             name='photo'
-            placeholder='Your photo'
             required
             onChange={(e) => setPhoto(e.target.files[0])}
           />

@@ -1,4 +1,4 @@
-// Éstas funciones llevan a cabo la comunicación con la base de datos
+//Éstas funciones llevan a cabo la comunicación con la base de datos
 export const getAllServices = async () => {
   const response = await fetch('http://localhost:4000/services');
 
@@ -89,20 +89,20 @@ export const getOwnUser = async ({ token }) => {
 export const getUser = async (id) => {
   const response = await fetch(`http://localhost:4000/users/${id}`);
 
-  const { data } = await response.json();
+  const json = await response.json();
 
   if (!response.ok) {
-    throw new Error(data.message);
+    throw new Error(json.message);
   }
 
-  return data;
+  return json.data;
 };
 
 export const createNewService = async ({
   title,
   description,
   file,
-  statusService,
+  //statusService,
   token,
 }) => {
   const formData = new FormData();
@@ -110,7 +110,7 @@ export const createNewService = async ({
   formData.append('title', title);
   formData.append('description', description);
   formData.append('file', file);
-  formData.append('statusService', statusService);
+  // formData.append('statusService', statusService);
 
   const response = await fetch('http://localhost:4000/services', {
     method: 'POST',

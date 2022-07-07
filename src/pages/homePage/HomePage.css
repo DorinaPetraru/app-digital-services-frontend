@@ -1,13 +1,24 @@
+/************************************/
+/***** sectionHomePage **************/
+/************************************/
+
 .sectionHomePage {
-  background-image: url('/image/dreamstimefree_17364677.jpg');
   display: flex;
+  flex-direction: column;
   position: relative;
-  text-align: center;
-  justify-content: center;
-  max-width: auto;
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: red;
+}
+
+/*********************************/
+/**** TABLET *********************/
+/*********************************/
+
+@media (min-width: 768px) {
+}
+
+/*********************************/
+/**** LG *************************/
+/*********************************/
+
+@media (min-width: 992px) {
 }

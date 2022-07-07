@@ -1,15 +1,14 @@
 import './LoginPage.css';
-import '../../components/cssStyle/form.css';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TokenContext } from '../../context/TokenContext';
+import { useToken } from '../../context/TokenContext';
 import { loginUser } from '../../dbCommunication';
 
 export const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { login } = useContext(TokenContext);
+  const [token, setToken] = useToken();
   const navigate = useNavigate();
 
   const handleForm = async (e) => {
@@ -20,8 +19,9 @@ export const LoginPage = () => {
       const data = await loginUser({ email, password });
 
       console.log(data.token);
-      login(data.token);
-      navigate('/');
+
+      setToken(data.token);
+      if (token) return navigate('/');
     } catch (error) {
       setError(error.message);
     }
@@ -56,6 +56,7 @@ export const LoginPage = () => {
         </fieldset>
 
         <button className='ButtonLoginPage'>Login</button>
+
         {error ? <p>{error}</p> : null}
       </form>
     </section>

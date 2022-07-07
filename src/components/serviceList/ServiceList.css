@@ -1,0 +1,123 @@
+:root {
+  --blue-color: rgb(61, 117, 134);
+  --blue2-color: rgb(29, 78, 93);
+  --granate-color: rgb(117, 9, 57);
+  --yellow-color: #de8e02;
+  --grey-color: rgb(178, 182, 189);
+  --write-color: rgb(255, 252, 232);
+  --green-color: rgb(115, 244, 132);
+  /* --grey2-color: rgb(106, 107, 109); */
+  --grey3-color: rgba(231, 232, 235);
+  --azul-color: rgb(129, 239, 249);
+  --shadow-color: rgb(50, 50, 50); /* sombreado en oneservice LG*/
+}
+
+.parallax {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/public/dreamstimefree_17364677.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: var(--write-color);
+  font-size: 2rem;
+}
+
+/******************************/
+/***** Sección ServiceList ****/
+/******************************/
+.serviceList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+h2 {
+  width: 40vh;
+  height: 15vh;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
+  color: var(--blue-color);
+  box-shadow: inset 0 0 15px 0 var(--blue-color);
+  background-color: var(--h2-serviceList-color);
+}
+
+h2:hover {
+  text-shadow: 0 0 5px var(--grey2-color);
+}
+
+h2:active {
+  border-style: inset;
+  color: var(--write-color);
+  background: var(--lightBlue-color);
+  background: linear-gradient(
+    0deg,
+    var(--blue2-color) 0%,
+    var(--lightBlue-color) 100%
+  );
+}
+
+/******************************/
+/***** Ul ServiceList *******/
+/******************************/
+
+.ulServicesList {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  gap: 1rem;
+  width: 90%;
+  height: 100%;
+}
+
+.ulServicesList > li {
+  flex-grow: 1;
+}
+.ulServicesList > li > .link {
+  text-decoration: none;
+}
+
+/* For Tablet ***********************/
+@media (min-width: 700px) {
+  .ulServicesList {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    height: 100vh;
+    gap: 1rem;
+  }
+
+  h2 {
+    box-shadow: inset 0 0 15px 0 var(--granate-color);
+    background-color: var(--h2-serviceList-color);
+  }
+}
+
+/* For lg *****************/
+
+@media (min-width: 992px) {
+  .ulServicesList {
+    margin: 1rem 0rem;
+  }
+
+  h2 {
+    box-shadow: inset 0 0 15px 0 var(--blue-color);
+    background-color: var(--h2-serviceList-color);
+  }
+}

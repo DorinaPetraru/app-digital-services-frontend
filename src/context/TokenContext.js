@@ -1,41 +1,25 @@
-import { createContext, useEffect, useState } from 'react';
-import { getOwnUser } from '../dbCommunication';
+import { createContext, useContext, useState } from 'react';
 
-export const TokenContext = createContext();
+const TokenContext = createContext(null);
 
 export const TokenProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    localStorage.setItem('token', token);
-  }, [token]);
-
-  useEffect(() => {
-    const ownUserData = async () => {
-      try {
-        const data = await getOwnUser({ token });
-        setUser(data.user);
-      } catch (error) {
-        logout();
-      }
-    };
-
-    if (token) ownUserData();
-  }, [token]);
-
-  const login = (token) => {
-    setToken(token);
+  const setTokenInLocalStorage = (newToken) => {
+    if (!newToken) {
+      localStorage.removeItem('token');
+    } else {
+      localStorage.setItem('token', newToken);
+    }
+    setToken(newToken);
   };
-
-  const logout = () => {
-    setToken('');
-    setUser(null);
-  };
-
   return (
-    <TokenContext.Provider value={{ token, user, login, logout }}>
+    <TokenContext.Provider value={[token, setTokenInLocalStorage]}>
       {children}
     </TokenContext.Provider>
   );
+};
+
+export const useToken = () => {
+  return useContext(TokenContext);
 };

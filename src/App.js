@@ -1,4 +1,5 @@
 import './App.css';
+//import '/./public/logo.png';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import { Routes, Route } from 'react-router-dom';
@@ -19,11 +20,10 @@ function App() {
         <Route path='/users' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/services/:idService' element={<ServicePage />} />
-
-        <Route path='/users/:idUser' element={<UserPage />} />
-        <Route path='/users/profile' element={<p>manageProfil</p>} />
-
         <Route path='/services' element={<CreateServicePage />} />
+        <Route path='/users/:idUser' element={<UserPage />} />
+
+        <Route path='/users/profile' element={<p>manageProfil</p>} />
         <Route
           path='//services/:idService/filecompleted'
           element={<p>uploadFileCompleted</p>}

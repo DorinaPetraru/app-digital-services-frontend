@@ -1,5 +1,5 @@
-import { useContext, useState } from 'react';
-import { TokenContext } from '../../context/TokenContext';
+import { useState } from 'react';
+import { useToken } from '../../context/TokenContext';
 import { createNewService } from '../../dbCommunication';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,12 +7,10 @@ export const CreateServicePage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState();
   const [file, setFile] = useState(null);
-  const [statusService, setStatusService] = useState('pending');
   const [error, setError] = useState('');
   const [creating, setCreating] = useState(false);
-
+  const [token] = useToken();
   const navigate = useNavigate();
-  const { token } = useContext(TokenContext);
 
   const handleForm = async (e) => {
     e.preventDefault();
@@ -25,9 +23,10 @@ export const CreateServicePage = () => {
         title,
         description,
         file,
-        statusService,
         token,
       });
+
+      console.log(title);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -37,9 +36,9 @@ export const CreateServicePage = () => {
   };
 
   return (
-    <form onSubmit={handleForm}>
+    <form className='formCreateServicePage' onSubmit={handleForm}>
       <fieldset>
-        <label htmlFor='title'>Title</label>
+        <label htmlFor='title'></label>
         <input
           type='text'
           id='title'
@@ -51,7 +50,7 @@ export const CreateServicePage = () => {
       </fieldset>
 
       <fieldset>
-        <label htmlFor='description'>Description</label>
+        <label htmlFor='description'></label>
         <textarea
           id='description'
           name='description'
@@ -62,7 +61,7 @@ export const CreateServicePage = () => {
       </fieldset>
 
       <fieldset>
-        <label htmlFor='file'>File</label>
+        <label htmlFor='file'></label>
         <input
           type='file'
           id='file'
@@ -72,23 +71,7 @@ export const CreateServicePage = () => {
         />
       </fieldset>
 
-      <fieldset>
-        <label htmlFor='statusService'>Status service</label>
-        <select
-          type='statusService'
-          id='statusService'
-          name='statusService'
-          placeholder='Your status'
-          required
-          onChange={(e) => setStatusService(e.target.value)}
-        >
-          <option value='pending'>Pending</option>
-          <option value='resolved'>Resolved</option>
-        </select>
-      </fieldset>
-
-      <button>Create</button>
-
+      <button className='ButtonCreateServicePage'>Create</button>
       {creating ? <p>Creating Service</p> : null}
       {error ? <p>{error}</p> : null}
     </form>

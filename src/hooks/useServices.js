@@ -14,9 +14,8 @@ const useServices = () => {
     const loadServices = async () => {
       try {
         setLoading(true);
+
         const data = await getAllServices();
-        console.log('hola');
-        console.log(data);
 
         setServices(data.services);
       } catch (error) {
