@@ -1,117 +1,144 @@
-.articleOneService {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  width: 100%;
-  background-color: var(--grey3-color);
+/*#### ARTICLE ONE SERVICES ########*/
+
+.articleOneServices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 1.3vmin;
 }
 
-/******************************/
-/***** Ul ServiceList *******/
-/******************************/
+/*#### UL ONE SERVICES ########*/
 
-.ulOneService {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  overflow-wrap: anywhere;
-  width: 90%;
-  height: 60%;
-  padding: 1rem;
-  list-style: none;
-  border-radius: 10px;
-  box-shadow: inset 0 0 15px 0 var(--shadow-color);
-  /*box-shadow: 10px 10px 2px var(--shadow-color);*/
-  color: var(--write-color);
-  background-color: var(--blue-color);
-}
-
-.ulOneService > li {
-  font-size: 1rem;
-}
-
-.ulOneService > li:first-child {
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--write-color);
-}
-.ulOneService > li:nth-child(3) > a,
-.ulOneService > li:nth-child(5) > a {
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--grey3-color);
-}
-
-.ulOneService > li:nth-child(5) > a > img {
-  /* width: 40px;*/
-  border-radius: 50px;
-}
-
-.ulOneService > li {
-  flex-grow: 1;
-}
-
-/* For Tablet ***********************/
-@media (min-width: 700px) {
-  /* .articleOneService {
-    background-image: url('/public/dreamstimefree_17364677.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-  } */
-  .ulOneService {
-    height: 50%;
-    width: 60%;
-    color: black;
+.ulOneServices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 18rem;
+    padding: 3vmin 2vmin;
+    min-height: 50vh;
+    margin: 3vmin 0vmin;
     box-shadow: inset 0 0 15px 0 var(--blue-color);
-    background-color: rgba(231, 232, 235, 0.7);
-  }
+}
 
-  .ulOneService > li {
-    font-size: 1.2rem;
-  }
-  .ulOneService > li:first-child {
-    font-size: 2rem;
-  }
-  .ulOneService > li:nth-child(3) > a,
-  .ulOneService > li:nth-child(5) > a {
-    font-size: 1.6rem;
-  }
+/*####  FIGURE DESCRIPTION ONE SERVICES ########*/
 
-  .ulOneService > li:first-child,
-  .ulOneService > li:nth-child(3) > a,
-  .ulOneService > li:nth-child(5) > a {
+.imagenOneService,
+.descriptionUlOneService {
+    border-radius: 1vmin;
+    margin: 0.5vmin 0vmin;
+    padding: 1vmin;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.imagenOneService {
+    background-color: var(--blue-color);
+}
+
+.descriptionUlOneService > h2 {
+    color: var(--blue-color);
+    font-size: var(--custom-font-size);
+}
+
+.descriptionUlOneService > li > p {
+    font-size: var(--custom-font-size);
+    font-weight: 400;
+}
+
+.imagenOneService > .linkOneServices {
+    text-decoration: none;
+    color: var(--grey3-color);
+    font-size: var(--h1-custom-font-size);
+}
+.imagenOneService > .linkOneServices > figure {
+    width: 100%;
+}
+
+.imagenOneService > .linkOneServices > figure > img {
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid var(--grey3-color);
+}
+
+.imagenOneService > .linkOneServices > figure > figcaption {
+    font-size: var(--h1-custom-font-size);
+}
+
+.imagenOneService .linkOneServices > h4 {
+    margin: 0.7vmin;
+}
+
+.descriptionUlOneService > li {
+    margin: 5vmin 1.3vmin;
+    list-style-type: none;
+}
+.descriptionUlOneService > li > .aDownloadFile {
+    text-decoration: none;
     font-weight: 500;
     color: var(--blue-color);
-  }
-}
-
-/* For lg *****************/
-
-@media (min-width: 992px) {
-  .ulOneService {
-    height: 60%;
-    width: 50%;
-    /* box-shadow: inset 0 0 10px 0 var(--shadow-color);
-    background-color: rgba(61, 117, 134, 0.4); */
-    color: black;
     box-shadow: inset 0 0 15px 0 var(--blue-color);
     background-color: rgba(231, 232, 235, 0.7);
-  }
+    border-radius: 10px;
+    padding: 0.5rem;
+}
 
-  .ulOneService > li:first-child {
-    font-weight: 600;
-  }
-  .ulOneService > li,
-  .ulOneService > li:first-child,
-  .ulOneService > li:nth-child(3) > a,
-  .ulOneService > li:nth-child(5) > a {
-    color: var(--blue-color);
-  }
+/**
+ * #########################
+ * ## MEDIA QUERY >700px ##
+ * #########################
+*/
+
+@media (min-width: 700px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 4vmin;
+    }
+
+    .ulOneServices {
+        width: 60%;
+        margin: 1.5vmin;
+    }
+    .imagenOneService {
+        float: left;
+        width: 30%;
+        margin-right: 0.5vmin;
+    }
+
+    .imagenOneService > .linkOneServices > figure {
+        width: 45%;
+        padding: 1vmin;
+    }
+
+    .descriptionUlOneService {
+        float: right;
+        width: 55%;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 3vmin;
+    }
+    .ulOneServices {
+        width: 65%;
+        margin: 1.5rem;
+    }
+
+    .imagenOneService > .linkOneServices > figure {
+        width: 35%;
+    }
+
+    .descriptionUlOneService {
+        width: 55%;
+    }
 }

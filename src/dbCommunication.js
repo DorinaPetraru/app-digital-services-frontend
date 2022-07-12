@@ -98,19 +98,12 @@ export const getUser = async (id) => {
   return json.data;
 };
 
-export const createNewService = async ({
-  title,
-  description,
-  file,
-  //statusService,
-  token,
-}) => {
+export const createNewService = async ({ title, description, file, token }) => {
   const formData = new FormData();
 
   formData.append('title', title);
   formData.append('description', description);
   formData.append('file', file);
-  // formData.append('statusService', statusService);
 
   const response = await fetch('http://localhost:4000/services', {
     method: 'POST',
@@ -126,4 +119,74 @@ export const createNewService = async ({
   if (!response.ok) {
     throw new Error(json.message);
   }
+};
+
+export const getAllComments = async (idService, token) => {
+  const response = await fetch(
+    `http://localhost:4000/services/${idService}/comments`,
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+
+  const { data } = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message);
+  }
+
+  return data;
+};
+
+export const createCommentsAndFileCompleted = async ({
+  text,
+  fileCompleted,
+  token,
+  idService,
+}) => {
+  const formData = new FormData();
+
+  formData.append('text', text);
+  formData.append('fileCompleted', fileCompleted);
+
+  const response = await fetch(
+    `http://localhost:4000/services/${idService}/filecompleted`,
+    {
+      method: 'POST',
+      mode: 'cors',
+      body: formData,
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+};
+
+export const updateServiceStatus = async (idService, token) => {
+  const response = await fetch(
+    `http://localhost:4000/services/${idService}/resolved`,
+    {
+      method: 'PUT',
+      mode: 'cors',
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+
+  const json = await response.json();
+
+  if (!response.ok) {
+    throw new Error(json.message);
+  }
+
+  return json.data;
 };

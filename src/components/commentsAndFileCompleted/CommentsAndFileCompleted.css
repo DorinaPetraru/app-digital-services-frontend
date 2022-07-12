@@ -1,0 +1,91 @@
+.commentsAndFileCompleted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.commentsAndFileCompleted > .formComments {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 2vmin;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 15px 0 var(--blue-color);
+}
+
+.commentsAndFileCompleted > .formComments > fieldset {
+    margin-bottom: 2vmin;
+    border: none;
+}
+
+.commentsAndFileCompleted > .formComments > fieldset > textarea {
+    width: 100%;
+    padding: 0.8vmin;
+    height: 20vmin;
+    border: none;
+    text-align: center;
+    border-bottom: 0.2vmin solid var(--blue-color);
+}
+
+.commentsAndFileCompleted > .formComments > fieldset > input {
+    width: 100%;
+    height: 10vmin;
+    border-bottom: 0.2vmin solid var(--blue-color);
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >700px ##
+ * #########################
+*/
+
+@media (min-width: 700px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 4vmin;
+    }
+
+    /* ## FORMS >700px ## */
+    .commentsAndFileCompleted > .formComments {
+        width: 100%;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > input {
+        height: 4vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        height: 7vmin;
+        padding: 0.8vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > input,
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        margin-bottom: 1vmin;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2vmin;
+        --h1-custom-font-size: 2.5vmin;
+    }
+    /* ## FORMS >1025px ## */
+
+    /* .commentsAndFileCompleted > .formComments {
+        width: 50%;
+    } */
+
+    .commentsAndFileCompleted > .formComments > fieldset > input {
+        height: 3.5vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        height: 6vmin;
+        padding: 1vmin;
+    }
+}

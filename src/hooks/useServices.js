@@ -4,7 +4,6 @@
 import { useEffect, useState } from 'react';
 import { getAllServices } from '../dbCommunication';
 
-// y sobre posibles errores
 const useServices = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,6 +15,8 @@ const useServices = () => {
         setLoading(true);
 
         const data = await getAllServices();
+        console.log('hola');
+        console.log(data);
 
         setServices(data.services);
       } catch (error) {

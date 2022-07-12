@@ -1,0 +1,145 @@
+/* ## FORMS  ## */
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vmin;
+}
+.forms > form > h1 {
+    color: var(--blue-color);
+    text-align: center;
+    margin: var(--h1-custom-font-size);
+    font-size: var(--h1-custom-font-size);
+}
+
+.forms > form {
+    width: 90%;
+}
+
+.forms > form > fieldset {
+    border: none;
+}
+
+.forms > form > fieldset > input {
+    height: 8vmin;
+}
+
+.forms > form > fieldset > textarea {
+    height: 10vmin;
+    padding: 0.5vmin;
+}
+
+.forms > form > fieldset > input,
+.forms > form > fieldset > textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 0.2vmin solid var(--blue-color);
+    margin-bottom: 4vmin;
+    font-size: var(--custom-font-size);
+}
+
+/* ## FORMS BUTTONS ## */
+
+.forms > form > .buttonForms {
+    display: block;
+    width: 80%;
+    min-height: 6vmin;
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--h1-custom-font-size);
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding: 0.5vmin;
+    color: var(--write-color);
+    border: 2px outset var(--write-color);
+    background: linear-gradient(
+        180deg,
+        var(--grey2-color) 0%,
+        var(--blue2-color) 100%
+    );
+}
+
+.forms > form > .buttonForms:hover {
+    text-shadow: 0 0 5px var(--write2-color);
+}
+
+.forms > form > .buttonForms:active {
+    border-style: inset;
+    color: var(--write-color);
+    background: var(--lightBlue-color);
+    background: linear-gradient(
+        0deg,
+        var(--blue-color) 0%,
+        var(--lightBlue-color) 100%
+    );
+}
+
+/**
+ * ########################
+ * ## MEDIA QUERY >700px ##
+ * ########################
+*/
+
+@media (min-width: 700px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 4vmin;
+    }
+
+    /* ## FORMS >700px ## */
+
+    .forms > form {
+        width: 60%;
+    }
+    .forms > form > .buttonForms {
+        width: 50%;
+    }
+    .forms > form > fieldset > input {
+        height: 4vmin;
+    }
+
+    .forms > form > fieldset > textarea {
+        height: 5vmin;
+        padding: 0.8vmin;
+    }
+
+    .forms > form > fieldset > input,
+    .forms > form > fieldset > textarea {
+        margin-bottom: 3vmin;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2vmin;
+        --h1-custom-font-size: 2.5vmin;
+    }
+
+    /* ## FORMS >1025px ## */
+
+    .forms > form {
+        width: 30%;
+    }
+
+    .forms > form > .buttonForms {
+        width: 50%;
+    }
+    .forms > form > fieldset:not(:last-of-type) > input {
+        height: 5vmin;
+    }
+
+    .forms > form > fieldset > input,
+    .forms > form > fieldset > textarea {
+        margin-bottom: 2vmin;
+    }
+}

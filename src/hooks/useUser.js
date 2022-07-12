@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getUser } from '../dbCommunication';
+
 const useUser = (id) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

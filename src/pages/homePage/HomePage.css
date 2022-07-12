@@ -1,24 +1,51 @@
-/************************************/
-/***** sectionHomePage **************/
-/************************************/
+/*#### SECTION HOME PAGE ########*/
 
 .sectionHomePage {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
-/*********************************/
-/**** TABLET *********************/
-/*********************************/
+/*#### H1, H3 HOME PAGE ########*/
 
-@media (min-width: 768px) {
+.sectionHomePage > h1 {
+    color: var(--blue-color);
+    font-size: var(--h1-custom-font-size);
 }
 
-/*********************************/
-/**** LG *************************/
-/*********************************/
+.sectionHomePage > h3 {
+    font-size: var(--custom-font-size);
+    color: var(--shadow-color);
+}
 
-@media (min-width: 992px) {
+/**
+ * ########################
+ * ## MEDIA QUERY >700px ##
+ * ########################
+*/
+
+@media (min-width: 700px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 3vmin;
+    }
+    /* .sectionHomePage > h1 {
+        margin-top: 1.5vmin;
+    } */
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2vmin;
+        --h1-custom-font-size: 2.5vmin;
+    }
 }
