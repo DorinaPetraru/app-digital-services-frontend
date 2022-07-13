@@ -24,8 +24,8 @@ export const UserPage = () => {
                     />
                 </figure>
                 {/* <p>Photo: {user.photo}</p> */}
-                <p>Email: {user.email}</p>
                 <p>Biography: {user.biography}</p>
+                <p>Email: {user.email}</p>
             </section>
         </section>
     );

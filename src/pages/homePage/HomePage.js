@@ -1,3 +1,4 @@
+import './HomePage.css';
 import useServices from '../../hooks/useServices';
 import { ServicesList } from '../../components/serviceList/ServicesList';
 import { ErrorMessage } from '../../components/ErrorMessage';
@@ -11,20 +12,14 @@ export const HomePage = () => {
     if (error) return <ErrorMessage message={error} />;
 
     return (
-        <>
-            <section className="sectionHomePage">
-                <h1>Digital services siempre a tu lado</h1>
-                <h3>List services</h3>
-                <h3>Escoge un servicio</h3>
+        <section className="sectionHomePage">
+            {token ? (
+                <Link className="link" to="/services">
+                    <button>Created service</button>
+                </Link>
+            ) : null}
 
-                {token ? (
-                    <Link className="link" to="/services">
-                        <button>Crear un servicio</button>
-                    </Link>
-                ) : null}
-
-                <ServicesList services={services} />
-            </section>
-        </>
+            <ServicesList services={services} />
+        </section>
     );
 };

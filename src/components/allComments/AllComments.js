@@ -1,0 +1,27 @@
+import './AllComments.css';
+export const AllComments = ({ comments }) => {
+    console.log({ comments });
+
+    return comments.length ? (
+        <ul className="ulAllCommentFileCompleted">
+            {comments.map((comment) => (
+                <li key={comment.id}>
+                    <p>{comment.text}</p>
+                    <li>
+                        {comment.fileCompleted ? (
+                            <a
+                                href={`http://localhost:4000/${comment.fileCompleted}`}
+                                download
+                            >
+                                Download completed file
+                            </a>
+                        ) : null}
+                    </li>
+                    <p>Create on {comment.createdAt}</p>
+                </li>
+            ))}
+        </ul>
+    ) : (
+        <p className="pAllComments">There are no comments yet</p>
+    );
+};

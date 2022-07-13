@@ -40,13 +40,6 @@
     );
 }
 
-/*#### H1 LIST SERVICES ########*/
-
-h1 {
-    color: var(--write-color);
-    font-size: var(--h1-custom-font-size);
-}
-
 /*#### UL LIST SERVICES ########*/
 
 .ulServicesList {

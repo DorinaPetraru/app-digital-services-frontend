@@ -17,6 +17,6 @@ export const ServicesList = ({ services }) => {
             </ul>
         </section>
     ) : (
-        <p> No hay servicios registrados todavía</p>
+        <p>No services yet</p>
     );
 };

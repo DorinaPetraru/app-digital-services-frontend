@@ -1,7 +1,46 @@
 .servicePage {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
-    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.servicePage > div {
+    padding: 2vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/**
+    * #########################
+    * ## MEDIA QUERY >500px ##
+    * #########################
+    */
+
+@media (min-width: 500px) {
+    .servicePage > div {
+        width: 90%;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >900px ##
+ * #########################
+ */
+
+@media (min-width: 900px) {
+    .servicePage {
+        margin-bottom: 15vmin;
+    }
+
+    .servicePage > div {
+        width: 80%;
+        margin-bottom: 20vmin;
+    }
 }

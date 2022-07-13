@@ -9,16 +9,9 @@
     overflow: hidden;
 }
 
-/*#### H1, H3 HOME PAGE ########*/
-
-.sectionHomePage > h1 {
-    color: var(--blue-color);
-    font-size: var(--h1-custom-font-size);
-}
-
 .sectionHomePage > h3 {
     font-size: var(--custom-font-size);
-    color: var(--shadow-color);
+    color: var(--yellow-color);
 }
 
 /**

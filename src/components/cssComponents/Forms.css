@@ -5,13 +5,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3vmin;
+    margin-top: 2vmin;
 }
 .forms > form > h1 {
     color: var(--blue-color);
     text-align: center;
     margin: var(--h1-custom-font-size);
-    font-size: var(--h1-custom-font-size);
 }
 
 .forms > form {
@@ -38,7 +37,7 @@
     width: 100%;
     border: none;
     border-bottom: 0.2vmin solid var(--blue-color);
-    margin-bottom: 4vmin;
+    margin-bottom: 3vmin;
     font-size: var(--custom-font-size);
 }
 
@@ -50,8 +49,7 @@
     min-height: 6vmin;
     cursor: pointer;
     text-align: center;
-    font-size: var(--h1-custom-font-size);
-    margin: 2rem auto;
+    margin: 2vmin auto;
     border-radius: 10px;
     padding: 0.5vmin;
     color: var(--write-color);
@@ -80,36 +78,92 @@
 
 /**
  * ########################
- * ## MEDIA QUERY >700px ##
+ * ## MEDIA QUERY >500px ##
  * ########################
 */
 
-@media (min-width: 700px) {
-    :root {
-        --custom-font-size: 2.5vmin;
-        --h1-custom-font-size: 4vmin;
-    }
-
-    /* ## FORMS >700px ## */
+@media (min-width: 500px) {
+    /* ## FORMS >500px ## */
 
     .forms > form {
-        width: 60%;
+        width: 80%;
     }
     .forms > form > .buttonForms {
-        width: 50%;
+        width: 80%;
     }
     .forms > form > fieldset > input {
-        height: 4vmin;
+        height: 8vmin;
     }
 
     .forms > form > fieldset > textarea {
-        height: 5vmin;
-        padding: 0.8vmin;
+        height: 10vmin;
+        padding-bottom: 1vmin;
     }
 
     .forms > form > fieldset > input,
     .forms > form > fieldset > textarea {
         margin-bottom: 3vmin;
+    }
+}
+
+/**
+ * ########################
+ * ## MEDIA QUERY >700px ##
+ * ########################
+*/
+
+@media (min-width: 700px) {
+    /* ## FORMS >700px ## */
+
+    .forms > form {
+        width: 70%;
+    }
+    .forms > form > .buttonForms {
+        width: 70%;
+    }
+    .forms > form > fieldset > input {
+        height: 7vmin;
+    }
+
+    .forms > form > fieldset > textarea {
+        height: 9vmin;
+        padding-bottom: 1vmin;
+    }
+
+    .forms > form > fieldset > input,
+    .forms > form > fieldset > textarea {
+        margin-bottom: 2vmin;
+    }
+}
+
+/**
+ * ########################
+ * ## MEDIA QUERY >900px ##
+ * ########################
+*/
+
+@media (min-width: 900px) {
+    /* ## FORMS >900px ## */
+
+    .forms > form {
+        width: 50%;
+    }
+    .forms > form > .buttonForms {
+        width: 50%;
+        min-height: 3vmin;
+    }
+    .forms > form > fieldset > input {
+        height: 6vmin;
+    }
+
+    .forms > form > fieldset > textarea {
+        height: 9vmin;
+        padding-bottom: 1vmin;
+    }
+
+    .forms > form > fieldset > input,
+    .forms > form > fieldset > textarea {
+        margin-bottom: 2vmin;
     }
 }
 
@@ -120,19 +174,14 @@
 */
 
 @media (min-width: 1025px) {
-    :root {
-        --custom-font-size: 2vmin;
-        --h1-custom-font-size: 2.5vmin;
-    }
-
     /* ## FORMS >1025px ## */
 
     .forms > form {
-        width: 30%;
+        width: 35%;
     }
 
     .forms > form > .buttonForms {
-        width: 50%;
+        width: 35%;
     }
     .forms > form > fieldset:not(:last-of-type) > input {
         height: 5vmin;

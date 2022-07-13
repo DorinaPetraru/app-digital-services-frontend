@@ -5,18 +5,19 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     background-color: var(--grey3-color);
     transition: background-color 0.5s;
 }
 .notFound:hover {
     background-color: var(--blue-color);
-    color: var(--grey3-color);
 }
 
 .notFound > h1 {
     margin: 10vmin;
-    font-size: 20vmin;
+    font-size: 15vmin;
+    color: var(--yellow-color);
 }
 
 .notFound > h1:hover {
@@ -30,12 +31,8 @@
 */
 
 @media (min-width: 700px) {
-    :root {
-        --custom-font-size: 3.5vmin;
-        --h1-custom-font-size: 5.5vmin;
-    }
     .notFound > h1 {
-        font-size: 16vmin;
+        font-size: 13vmin;
     }
 }
 
@@ -46,12 +43,7 @@
 */
 
 @media (min-width: 1025px) {
-    :root {
-        --custom-font-size: 3vmin;
-        --h1-custom-font-size: 5vmin;
-    }
-
     .notFound > h1 {
-        font-size: 13vmin;
+        font-size: 11vmin;
     }
 }
