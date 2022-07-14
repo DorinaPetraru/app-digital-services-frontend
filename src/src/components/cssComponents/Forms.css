@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 2vmin;
-    height: 110vmin;
 }
 .forms > form > h1 {
     color: var(--blue-color);

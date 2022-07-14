@@ -1,32 +1,17 @@
-//import './ServicePage.css';
+import './ServicePage.css';
+import '../../components/allComments/AllComments';
 import useService from '../../hooks/useService';
 import { useParams } from 'react-router-dom';
 import { ErrorMessage } from '../../components/ErrorMessage';
 import { OneService } from '../../components/oneService/OneService';
 import { AllComments } from '../../components/allComments/AllComments';
+import useComments from '../../hooks/useComments';
 import { CommentsAndFileCompleted } from '../../components/commentsAndFileCompleted/CommentsAndFileCompleted';
-import { useToken } from '../../context/TokenContext';
-import { useEffect, useState } from 'react';
-import { getAllComments } from '../../dbCommunication';
 
 export const ServicePage = () => {
-    const [token] = useToken();
     const { idService } = useParams();
     const { service, loading, error } = useService(idService);
-    const [comments, setComments] = useState(null);
-
-    useEffect(() => {
-        const loadComments = async () => {
-            try {
-                const data = await getAllComments(idService, token);
-                setComments(data.comments);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        loadComments();
-    }, [token, setComments]);
+    const { comments } = useComments(idService);
 
     if (loading) return <p>Cargando el servicio seleccionado...</p>;
     if (error) return <ErrorMessage message={error} />;
@@ -35,10 +20,7 @@ export const ServicePage = () => {
         <section className="servicePage">
             <OneService service={service} />
             <div>
-                <CommentsAndFileCompleted
-                    setComments={setComments}
-                    comments={comments}
-                />
+                <CommentsAndFileCompleted />
                 <AllComments comments={comments} />
             </div>
         </section>

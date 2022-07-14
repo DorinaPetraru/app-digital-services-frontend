@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--custom-font-size);
+}
+
+.app {
+    width: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*#### ROOT PAGE ########*/
+
+:root {
+    --blue-color: rgb(29, 78, 93);
+    --blue2-color: rgb(29, 78, 93, 1);
+    --lightBlue-color: rgb(129, 239, 249, 1);
+    --granate-color: rgb(117, 9, 57);
+    --yellow-color: rgb(222, 142, 2);
+    --write-color: rgb(255, 252, 232);
+    --write2-color: rgb(255, 252, 232, 1);
+    --grey-color: rgb(178, 182, 189);
+    --grey2-color: rgb(178, 182, 189, 1);
+    --grey3-color: rgba(231, 232, 235);
+    --h2-serviceList-color: rgba(231, 232, 235, 0.7);
+    --shadow-color: rgb(50, 50, 50); /* sombreado en oneservice LG*/
+
+    --custom-font-size: 4vmin;
+    --h1-custom-font-size: 6vmin;
+}
+
+h1 {
+    font-size: var(--h1-custom-font-size);
+}
+
+.link > a,
+a {
+    text-decoration: none;
+    color: var(--yellow-color);
+}
+
+/*##############  HEADER  ###################*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue-color);
+    min-height: 12vmin;
+    width: 100%;
+}
+header > .ulHeader {
+    border-right: 2rem;
+}
+
+header > nav > .ulHeader > .btnEffect {
+    color: var(--grey2-color);
+    font-weight: 500;
+}
+
+/* ####### LOGO ###############*/
+
+.spanDsHeader {
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: inset 0 0 5px 0 var(--grey2-color);
+    /* font-size: var(--h1-custom-font-size); */
+    color: var(--grey2-color);
+    padding: 1vmin;
+    margin: 1vmin;
+}
+.spanDigitalHeader {
+    color: var(--grey2-color);
+    font-weight: 400;
+    /* font-size: var(--h1-custom-font-size); */
+}
+
+.spanServicesHeader {
+    color: var(--yellow-color);
+    /* font-size: var(--h1-custom-font-size); */
+}
+
+/* ## FOOTER ##*/
+
+footer {
+    position: fixed;
+    height: 8vmin;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+/**
+ * ########################
+ * ## MEDIA QUERY >700px ##
+ * ########################
+*/
+
+@media (min-width: 700px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 4vmin;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 3vmin;
+    }
+}

@@ -1,0 +1,90 @@
+.commentsAndFileCompleted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4vmin;
+}
+.commentsAndFileCompleted > .formComments {
+    margin-bottom: 1rem;
+    padding: 1vmin;
+    width: 100%;
+    border-radius: 1vmin;
+    box-shadow: inset 0 0 1vmin 0 var(--blue-color);
+}
+
+.commentsAndFileCompleted > .formComments > fieldset {
+    margin-bottom: 2vmin;
+    border: none;
+    border-bottom: 0.1vmin solid var(--blue-color);
+}
+
+.commentsAndFileCompleted > .formComments > fieldset > textarea,
+.commentsAndFileCompleted > .formComments > fieldset > input {
+    width: 98%;
+    height: 15vmin;
+    border: none;
+    text-align: center;
+    /* padding: 3vmin 2vmin; */
+    margin: 1vmin;
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >500px ##
+ * #########################
+*/
+
+@media (min-width: 500px) {
+    /* ## FORMS >700px ## */
+
+    .commentsAndFileCompleted > .formComments > fieldset > input {
+        height: 12vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        height: 14vmin;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >700px ##
+ * #########################
+*/
+
+@media (min-width: 700px) {
+    /* ## FORMS >700px ## */
+
+    .commentsAndFileCompleted > .formComments > fieldset > input {
+        height: 10vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        height: 12vmin;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY >900px ##
+ * #########################
+*/
+
+@media (min-width: 900px) {
+    /* ## FORMS >1025px ## */
+
+    .commentsAndFileCompleted {
+        width: 45%;
+        box-shadow: none;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > input {
+        height: 8vmin;
+    }
+
+    .commentsAndFileCompleted > .formComments > fieldset > textarea {
+        height: 10vmin;
+    }
+}

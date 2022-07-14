@@ -1,192 +1,193 @@
 //Éstas funciones llevan a cabo la comunicación con la base de datos
 export const getAllServices = async () => {
-  const response = await fetch('http://localhost:4000/services');
+    const response = await fetch('http://localhost:4000/services');
 
-  const { data } = await response.json();
+    const { data } = await response.json();
 
-  if (!response.ok) {
-    throw new Error(data.message);
-  }
+    if (!response.ok) {
+        throw new Error(data.message);
+    }
 
-  return data;
+    return data;
 };
 
 export const getOneService = async (id) => {
-  const response = await fetch(`http://localhost:4000/services/${id}`);
+    const response = await fetch(`http://localhost:4000/services/${id}`);
 
-  const { data } = await response.json();
+    const { data } = await response.json();
 
-  if (!response.ok) {
-    throw new Error(data.message);
-  }
+    if (!response.ok) {
+        throw new Error(data.message);
+    }
 
-  return data;
+    return data;
 };
 
 export const registerUser = async ({
-  name,
-  email,
-  biography,
-  photo,
-  password,
+    name,
+    email,
+    biography,
+    photo,
+    password,
 }) => {
-  const formData = new FormData();
+    const formData = new FormData();
 
-  formData.append('name', name);
-  formData.append('email', email);
-  formData.append('biography', biography);
-  formData.append('photo', photo);
-  formData.append('password', password);
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('biography', biography);
+    formData.append('photo', photo);
+    formData.append('password', password);
 
-  const response = await fetch('http://localhost:4000/users', {
-    method: 'POST',
-    mode: 'cors',
-    body: formData,
-  });
+    const response = await fetch('http://localhost:4000/users', {
+        method: 'POST',
+        mode: 'cors',
+        body: formData,
+    });
 
-  const json = await response.json();
+    const json = await response.json();
 
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
+    if (!response.ok) {
+        throw new Error(json.message);
+    }
 };
 
 export const loginUser = async ({ email, password }) => {
-  const response = await fetch('http://localhost:4000/login', {
-    method: 'POST',
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ email, password }),
-  });
+    const response = await fetch('http://localhost:4000/login', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+    });
 
-  const json = await response.json();
+    const json = await response.json();
 
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
+    if (!response.ok) {
+        throw new Error(json.message);
+    }
 
-  return json.data;
+    return json.data;
 };
 
 export const getOwnUser = async ({ token }) => {
-  const response = await fetch(`http://localhost:4000/users`, {
-    headers: {
-      Authorization: token,
-    },
-  });
+    const response = await fetch(`http://localhost:4000/users`, {
+        headers: {
+            Authorization: token,
+        },
+    });
 
-  const { data } = await response.json();
+    const { data } = await response.json();
 
-  if (!response.ok) {
-    throw new Error(data.message);
-  }
+    if (!response.ok) {
+        throw new Error(data.message);
+    }
 
-  return data;
+    return data;
 };
 
 export const getUser = async (id) => {
-  const response = await fetch(`http://localhost:4000/users/${id}`);
+    const response = await fetch(`http://localhost:4000/users/${id}`);
 
-  const json = await response.json();
+    const json = await response.json();
 
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
+    if (!response.ok) {
+        throw new Error(json.message);
+    }
 
-  return json.data;
+    return json.data;
 };
 
 export const createNewService = async ({ title, description, file, token }) => {
-  const formData = new FormData();
+    const formData = new FormData();
 
-  formData.append('title', title);
-  formData.append('description', description);
-  formData.append('file', file);
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('file', file);
 
-  const response = await fetch('http://localhost:4000/services', {
-    method: 'POST',
-    mode: 'cors',
-    body: formData,
-    headers: {
-      Authorization: token,
-    },
-  });
+    const response = await fetch('http://localhost:4000/services', {
+        method: 'POST',
+        mode: 'cors',
+        body: formData,
+        headers: {
+            Authorization: token,
+        },
+    });
 
-  const json = await response.json();
+    const json = await response.json();
 
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
+    if (!response.ok) {
+        throw new Error(json.message);
+    }
 };
 
 export const getAllComments = async (idService, token) => {
-  const response = await fetch(
-    `http://localhost:4000/services/${idService}/comments`,
-    {
-      headers: {
-        Authorization: token,
-      },
+    const response = await fetch(
+        `http://localhost:4000/services/${idService}/comments`,
+        {
+            headers: {
+                Authorization: token,
+            },
+        }
+    );
+
+    const { data } = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.message);
     }
-  );
 
-  const { data } = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message);
-  }
-
-  return data;
+    return data;
 };
 
 export const createCommentsAndFileCompleted = async ({
-  text,
-  fileCompleted,
-  token,
-  idService,
+    text,
+    fileCompleted,
+    token,
+    idService,
 }) => {
-  const formData = new FormData();
+    const formData = new FormData();
 
-  formData.append('text', text);
-  formData.append('fileCompleted', fileCompleted);
+    formData.append('text', text);
+    formData.append('fileCompleted', fileCompleted);
 
-  const response = await fetch(
-    `http://localhost:4000/services/${idService}/filecompleted`,
-    {
-      method: 'POST',
-      mode: 'cors',
-      body: formData,
-      headers: {
-        Authorization: token,
-      },
+    const response = await fetch(
+        `http://localhost:4000/services/${idService}/filecompleted`,
+        {
+            method: 'POST',
+            mode: 'cors',
+            body: formData,
+            headers: {
+                Authorization: token,
+            },
+        }
+    );
+
+    const json = await response.json();
+
+    if (!response.ok) {
+        throw new Error(json.message);
     }
-  );
-
-  const json = await response.json();
-
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
+    return json.data.comment;
 };
 
 export const updateServiceStatus = async (idService, token) => {
-  const response = await fetch(
-    `http://localhost:4000/services/${idService}/resolved`,
-    {
-      method: 'PUT',
-      mode: 'cors',
-      headers: {
-        Authorization: token,
-      },
+    const response = await fetch(
+        `http://localhost:4000/services/${idService}/resolved`,
+        {
+            method: 'PUT',
+            mode: 'cors',
+            headers: {
+                Authorization: token,
+            },
+        }
+    );
+
+    const json = await response.json();
+
+    if (!response.ok) {
+        throw new Error(json.message);
     }
-  );
 
-  const json = await response.json();
-
-  if (!response.ok) {
-    throw new Error(json.message);
-  }
-
-  return json.data;
+    return json.data;
 };

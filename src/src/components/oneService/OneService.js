@@ -22,7 +22,7 @@ export const OneService = ({ service }) => {
                             width="90"
                         />
 
-                        <figcaption> Created by {user.name}</figcaption>
+                        <figcaption> Created by{user.name}</figcaption>
                     </figure>
                 </Link>
             </div>{' '}

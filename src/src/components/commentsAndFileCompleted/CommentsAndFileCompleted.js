@@ -4,7 +4,7 @@ import { useToken } from '../../context/TokenContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { createCommentsAndFileCompleted } from '../../dbCommunication';
 
-export const CommentsAndFileCompleted = ({ comments, setComments }) => {
+export const CommentsAndFileCompleted = () => {
     const { idService } = useParams();
     const [text, setText] = useState();
     const [fileCompleted, setFileCompleted] = useState(null);
@@ -17,14 +17,12 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
         setError('');
 
         try {
-            const newComment = await createCommentsAndFileCompleted({
+            await createCommentsAndFileCompleted({
                 text,
                 fileCompleted,
                 token,
                 idService,
             });
-
-            setComments([...comments, newComment]);
         } catch (error) {
             setError(error.message);
         } finally {

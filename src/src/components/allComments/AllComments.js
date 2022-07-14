@@ -1,12 +1,11 @@
 import './AllComments.css';
-
 export const AllComments = ({ comments }) => {
     return comments.length ? (
         <ul className="ulAllCommentFileCompleted">
             {comments.map((comment) => (
                 <li key={comment.id}>
                     <p>{comment.text}</p>
-                    <p>
+                    <li>
                         {comment.fileCompleted ? (
                             <a
                                 href={`http://localhost:4000/${comment.fileCompleted}`}
@@ -15,7 +14,7 @@ export const AllComments = ({ comments }) => {
                                 Download completed file
                             </a>
                         ) : null}
-                    </p>
+                    </li>
                     <p>Create on {comment.createdAt}</p>
                 </li>
             ))}

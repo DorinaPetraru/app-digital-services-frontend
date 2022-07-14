@@ -4,11 +4,10 @@
     display: flex;
     /* align-items: center; */
     flex-wrap: wrap;
-    text-align: center;
     width: 100%;
     border-radius: 1vmin;
     box-shadow: inset 0 0 1vmin 0 var(--blue-color);
-    padding: 3vmin;
+    padding: 2vmin;
 }
 
 /*####  FIGURE DESCRIPTION ONE SERVICES ########*/

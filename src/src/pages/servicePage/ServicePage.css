@@ -4,7 +4,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 200vmin;
+    min-height: 100vh;
 }
 
 .servicePage > div {
