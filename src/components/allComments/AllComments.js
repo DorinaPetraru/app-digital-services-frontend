@@ -21,10 +21,6 @@ export const AllComments = (comments) => {
             ))}
         </ul>
     ) : (
-        <ul className="articleAllComment">
-            <li>
-                <p className="pAllComments">There are no comments yet</p>
-            </li>
-        </ul>
+        <p className="pAllComments">There are no comments yet</p>
     );
 };

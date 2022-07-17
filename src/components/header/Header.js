@@ -41,7 +41,7 @@ const Header = () => {
                     <div className="linkHeader">
                         <p>
                             <button className="btnEffect">
-                                <Link to="/users">Sign up</Link>
+                                <Link to="/users">Register</Link>
                             </button>
                         </p>
                         <p>

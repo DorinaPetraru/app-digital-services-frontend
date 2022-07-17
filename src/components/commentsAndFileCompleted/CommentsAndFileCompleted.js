@@ -33,12 +33,12 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
     };
 
     return (
-        <section className="commentsAndFileCompleted">
+        <article className="commentsAndFileCompleted">
             <form className="formComments" onSubmit={handleForm}>
                 <fieldset>
                     <label htmlFor="text"></label>
                     <textarea
-                        // value={text}
+                        value={text}
                         id="text"
                         name="text"
                         placeholder="Add your comment"
@@ -50,7 +50,7 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
                 <fieldset>
                     <label htmlFor="fileCompleted"></label>
                     <input
-                        // value={fileCompleted}
+                        value={fileCompleted}
                         type="file"
                         id="fileCompleted"
                         name="fileCompleted"
@@ -62,6 +62,6 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
                 <button className="buttonForms">Add</button>
                 {error ? <p>{error}</p> : null}
             </form>
-        </section>
+        </article>
     );
 };

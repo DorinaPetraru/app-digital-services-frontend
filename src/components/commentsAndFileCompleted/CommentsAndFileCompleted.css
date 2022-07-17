@@ -1,12 +1,15 @@
+/*########## ARTICLE - CommentsAndFileCompleted ##############*/
+
 .commentsAndFileCompleted {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-
-    /* margin-top: 4vmin; */
 }
+
+/*########## FormComments - CommentsAndFileCompleted ##############*/
+
 .commentsAndFileCompleted > .formComments {
     margin-bottom: 1rem;
     padding: 1vmin;
@@ -24,11 +27,47 @@
 .commentsAndFileCompleted > .formComments > fieldset > textarea,
 .commentsAndFileCompleted > .formComments > fieldset > input {
     width: 98%;
-    height: 15vmin;
+    outline: none;
     border: none;
+    height: 15vmin;
     text-align: center;
-    /* padding: 3vmin 2vmin; */
     margin: 1vmin;
+    font-size: var(--custom-font-size);
+}
+
+/*########## ButtonsForms - CommentsAndFileCompleted ##############*/
+
+.commentsAndFileCompleted > .formComments > .buttonForms {
+    display: block;
+    width: 80%;
+    min-height: 6vmin;
+    cursor: pointer;
+    text-align: center;
+    margin: 2vmin auto;
+    border-radius: 10px;
+    padding: 0.5vmin;
+    color: var(--write-color);
+    border: 2px outset var(--write-color);
+    background: linear-gradient(
+        180deg,
+        var(--grey2-color) 0%,
+        var(--blue2-color) 100%
+    );
+}
+
+.commentsAndFileCompleted > .formComments > .buttonForms:hover {
+    text-shadow: 0 0 5px var(--write2-color);
+}
+
+.commentsAndFileCompleted > .formComments > .buttonForms:active {
+    border-style: inset;
+    color: var(--write-color);
+    background: var(--lightBlue-color);
+    background: linear-gradient(
+        0deg,
+        var(--blue-color) 0%,
+        var(--lightBlue-color) 100%
+    );
 }
 
 /**
@@ -38,7 +77,10 @@
 */
 
 @media (min-width: 500px) {
-    /* ## FORMS >700px ## */
+    /* ## FORMS >500px ## */
+    .commentsAndFileCompleted > .formComments > .buttonForms {
+        width: 80%;
+    }
 
     .commentsAndFileCompleted > .formComments > fieldset > input {
         height: 12vmin;
@@ -61,6 +103,14 @@
         width: 45%;
     }
 
+    .commentsAndFileCompleted > .formComments {
+        box-shadow: none;
+    }
+
+    .commentsAndFileCompleted > .formComments > .buttonForms {
+        width: 70%;
+    }
+
     .commentsAndFileCompleted > .formComments > fieldset > input {
         height: 10vmin;
     }
@@ -81,6 +131,10 @@
 
     .commentsAndFileCompleted {
         box-shadow: none;
+    }
+
+    .commentsAndFileCompleted > .formComments > .buttonForms {
+        width: 60%;
     }
 
     .commentsAndFileCompleted > .formComments > fieldset > input {

@@ -1,5 +1,4 @@
 import './OneService.css';
-import '../../components/cssComponents/Forms.css';
 import useOwnUser from '../../hooks/useOwnUser';
 import { Link } from 'react-router-dom';
 import { updateServiceStatus } from '../../dbCommunication';
@@ -34,7 +33,6 @@ export const OneService = ({ service }) => {
                         <img
                             src={`http://localhost:4000/${user.photo}`}
                             alt="Profile"
-                            width="90"
                         />
 
                         <figcaption>
@@ -63,10 +61,8 @@ export const OneService = ({ service }) => {
                 <li>Service status: {service[0].statusService}</li>
                 {user.id === ownUser.id ? (
                     <li>
-                        <button>
-                            <h5 className="buttonResolved">
-                                Marcar como resuelto
-                            </h5>
+                        <button className="buttonResolved">
+                            Marcar como resuelto
                         </button>
                     </li>
                 ) : null}

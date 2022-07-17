@@ -5,18 +5,17 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 200vmin;
     justify-content: stretch;
 }
 
 .servicePage > div {
     padding: 2vmin;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
     justify-content: space-around;
+    margin: 3vmin 0vmin;
 }
 
 /**
@@ -44,6 +43,8 @@
 
     .servicePage > div {
         width: 80%;
+        border-radius: 1vmin;
+        box-shadow: inset 0 0 1vmin 0 var(--blue-color);
     }
 
     .servicePage > div:nth-child(2) {

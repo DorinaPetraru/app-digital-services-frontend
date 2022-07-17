@@ -1,3 +1,5 @@
+/*########## ButtonCreate - HomePage y NotFoundPage  ##############*/
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -5,7 +7,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: transparent;
+    -webkit-top-hightlight-color: transparent;
 }
 
 h5 {

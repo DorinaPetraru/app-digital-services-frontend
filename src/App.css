@@ -116,7 +116,7 @@ footer {
     text-align: center;
     background-color: var(--blue-color);
     color: var(--write-color);
-    padding: 4vmin 0;
+    padding: 10vmin 0;
     font-size: 8vmin;
 }
 
@@ -182,10 +182,6 @@ footer {
 
     .spanServicesHeader {
         font-weight: 700;
-    }
-
-    header > nav > div.divHeader > a > figure > img {
-        box-shadow: inset 0 0 1vmin 0 var(--blue-color);
     }
 
     header > nav > div.linkHeader {
