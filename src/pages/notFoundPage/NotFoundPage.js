@@ -6,11 +6,9 @@ export const NotFoundPage = () => {
     return (
         <section className="notFound">
             <h1>Not found</h1>
-            <button className="btnEffect">
-                <Link to="/">
-                    <span> Go to Home</span>
-                </Link>
-            </button>
+            <Link to="/">
+                <h5 className="noselect"> Go to Home</h5>
+            </Link>
         </section>
     );
 };

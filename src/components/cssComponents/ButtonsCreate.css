@@ -1,0 +1,46 @@
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h5 {
+    width: 100%;
+    height: 10vmin;
+    padding: 2vmin 2vmin 2vmin 3vmin;
+    cursor: pointer;
+    color: var(--yellow-color);
+    font-size: var(--h1-custom-font-size);
+    border-radius: 4vmin;
+    box-shadow: inset 0vmin 1vmin 2vmin var(--blue2-color),
+        0vmin 0vmin 1.5vmin rgba(0, 0, 0, 0.15);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        45deg,
+        rgba(2, 0, 36, 0) 5%,
+        var(--blue2-color) 6%,
+        rgba(255, 255, 255, 0) 9%,
+        var(--blue2-color) 10%,
+        rgba(255, 255, 255, 0) 17%,
+        var(--blue2-color) 19%,
+        rgba(255, 255, 255, 0) 21%
+    );
+    background-size: 200%;
+    background-position: right;
+    transition: 1s;
+}
+
+h5:hover {
+    background-position: left;
+    color: var(--grey3-color);
+    box-shadow: inset 0px 3px 5px var(--grey3-color),
+        0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+h5:focus {
+    outline: none;
+}

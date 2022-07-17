@@ -9,7 +9,7 @@ const Header = () => {
 
     const user = useOwnUser(token);
     return (
-        <header className="header">
+        <header>
             <p>
                 <Link className="link" to="/">
                     <span className="spanDsHeader">DS</span>
@@ -20,27 +20,28 @@ const Header = () => {
 
             <nav>
                 {token && user ? (
-                    <p className="ulHeader">
+                    <div className="divHeader">
                         <Link to={`/users/${user.id}`}>
-                            {user.name}
-                            <img
-                                src={`http://localhost:4000/${user.photo}`}
-                                alt="Profile"
-                                width="40"
-                            />
-                        </Link>{' '}
+                            <figure>
+                                <img
+                                    src={`http://localhost:4000/${user.photo}`}
+                                    alt="Profile"
+                                />
+                                <figcaption>{user.name}</figcaption>
+                            </figure>
+                        </Link>
                         <button
                             className="btnEffect"
                             onClick={() => setToken(null)}
                         >
                             Logout
                         </button>
-                    </p>
+                    </div>
                 ) : (
-                    <div className="ulHeader">
+                    <div className="linkHeader">
                         <p>
                             <button className="btnEffect">
-                                <Link to="/users">Register</Link>
+                                <Link to="/users">Sign up</Link>
                             </button>
                         </p>
                         <p>

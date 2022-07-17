@@ -7,14 +7,13 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    background-color: var(--grey3-color);
+    background-color: var(--blue-color);
     transition: background-color 0.5s;
 }
 .notFound:hover {
-    background-color: var(--blue-color);
+    background-color: var(--write-color);
 }
-
-.notFound > h1 {
+.notFound .notFound > h1 {
     margin: 10vmin;
     font-size: 15vmin;
     color: var(--yellow-color);

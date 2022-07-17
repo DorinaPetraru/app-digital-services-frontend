@@ -1,6 +1,6 @@
-/*#### SECTION HOME PAGE ########*/
+/*########  SECTION HOME PAGE  ########*/
 
-.sectionHomePage {
+section.sectionHomePage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,14 +9,51 @@
     overflow: hidden;
 }
 
-.sectionHomePage > h3 {
-    font-size: var(--custom-font-size);
+/*########  H1, H3 HOME PAGE  ########*/
+
+section.sectionHomePage > h1 {
+    color: var(--blue-color);
+    font-size: 10vmin;
+    text-align: center;
+    margin: 5vmin;
+}
+
+section.sectionHomePage > h3 {
+    font-size: 9vmin;
     color: var(--yellow-color);
+    margin-top: 15vmin;
+}
+
+@media (min-width: 65px) {
+    section.sectionHomePage > h1 {
+        font-size: 11vmin;
+        text-align: end;
+        margin-top: 10vmin;
+        margin-bottom: 10vmin;
+    }
+}
+
+@media (min-width: 200px) {
+    section.sectionHomePage > h3 {
+        font-size: 8vmin;
+        margin-top: 10vmin;
+    }
+}
+
+@media (min-width: 500px) {
+    section.sectionHomePage > h3 {
+        font-size: 7vmin;
+    }
+
+    section.sectionHomePage > h1 {
+        font-size: 13vmin;
+        margin-bottom: 20vmin;
+    }
 }
 
 /**
  * ########################
- * ## MEDIA QUERY >700px ##
+ * ##       TABLET       ##
  * ########################
 */
 
@@ -25,14 +62,11 @@
         --custom-font-size: 2.5vmin;
         --h1-custom-font-size: 3vmin;
     }
-    /* .sectionHomePage > h1 {
-        margin-top: 1.5vmin;
-    } */
 }
 
 /**
  * #########################
- * ## MEDIA QUERY >1025px ##
+ * ##      ORDENADOR      ##
  * #########################
 */
 
@@ -40,5 +74,9 @@
     :root {
         --custom-font-size: 2vmin;
         --h1-custom-font-size: 2.5vmin;
+    }
+    section.sectionHomePage > h1 {
+        font-size: 15vmin;
+        margin-bottom: 20vmin;
     }
 }

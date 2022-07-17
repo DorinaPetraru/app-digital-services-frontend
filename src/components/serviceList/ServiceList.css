@@ -1,16 +1,16 @@
-/*#### SECTION LIST SERVICES ########*/
+/*######## SECTION LIST SERVICES ########*/
 
-.serviceList {
+section.serviceList {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    margin-top: 2vmin;
+    margin-top: 5vmin;
     width: 100%;
     height: 100%;
 }
 
-/*#### ARTICLE LIST SERVICES ########*/
+/*######## ARTICLE LIST SERVICES ########*/
 
 .article {
     width: 80vmin;
@@ -18,11 +18,12 @@
     cursor: pointer;
     text-align: center;
     border-radius: 1vmin;
-    padding: 1.3vmin 1vmin;
+    padding: 6vmin 1vmin;
     color: var(--blue-color);
     box-shadow: inset 0 0 15px 0 var(--blue-color);
     background-color: var(--h2-serviceList-color);
     margin: 1vmin;
+    font-size: 8vmin;
 }
 
 .article :hover {
@@ -40,7 +41,11 @@
     );
 }
 
-/*#### UL LIST SERVICES ########*/
+.statusServiceHome{
+    font-size: small;
+}
+
+/*######## UL LIST SERVICES ########*/
 
 .ulServicesList {
     display: flex;
@@ -53,6 +58,8 @@
     gap: 1vmin;
     width: 90%;
     height: 100%;
+    margin-top: 10vmin;
+    margin-bottom: 40vmin;
 }
 
 .ulServicesList > li {
@@ -62,10 +69,38 @@
     text-decoration: none;
 }
 
+
+@media (min-width: 100px) {
+    .article {
+        font-size: 7vmin;
+    }
+}
+
+@media (min-width: 200px) {
+    .article {
+        font-size: 6vmin;
+        padding: 7vmin 1vmin;
+    }
+    .ulServicesList {
+        margin-bottom: 30vmin;
+        margin-top: 3vmin;
+    }
+}
+
+@media (min-width: 300px) {
+    .article {
+        font-size: 5vmin;
+    }
+
+    .ulServicesList {
+        margin-bottom: 20vmin;
+    }
+}
+
 /**
- * ########################
- * ## MEDIA QUERY >700px ##
- * ########################
+ * #########################
+ * ##        TABLET       ##
+ * #########################
 */
 
 @media (min-width: 700px) {
@@ -79,17 +114,22 @@
         align-items: baseline;
         flex-wrap: wrap;
         gap: 1vmin;
+        margin-bottom: 20vmin;
     }
 
     .article {
         width: 35vmin;
         height: 20vmin;
+        font-size: 4vmin;
+        text-align: center;
+        padding: 7vmin 3vmin;
     }
+
 }
 
 /**
  * #########################
- * ## MEDIA QUERY >1025px ##
+ * ##      ORDENADOR      ##
  * #########################
 */
 
@@ -100,10 +140,13 @@
     }
     .ulServicesList {
         margin: 3vmin 0vmin;
+        margin-bottom: 20vmin;
     }
 
     .article {
-        width: 25vmin;
+        width: 30vmin;
         height: 15vmin;
-    }
+        font-size: 3vmin;
+        padding: 5vmin 3vmin;
+        }
 }

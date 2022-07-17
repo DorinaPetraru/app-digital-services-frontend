@@ -4,7 +4,8 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 4vmin;
+    align-items: stretch;
+    /* margin-top: 4vmin; */
 }
 .commentsAndFileCompleted > .formComments {
     margin-bottom: 1rem;
@@ -56,6 +57,9 @@
 
 @media (min-width: 700px) {
     /* ## FORMS >700px ## */
+    .commentsAndFileCompleted {
+        width: 45%;
+    }
 
     .commentsAndFileCompleted > .formComments > fieldset > input {
         height: 10vmin;
@@ -76,7 +80,6 @@
     /* ## FORMS >1025px ## */
 
     .commentsAndFileCompleted {
-        width: 45%;
         box-shadow: none;
     }
 

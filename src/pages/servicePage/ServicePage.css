@@ -1,3 +1,4 @@
+/* ####### SECTION SERVICE PAGE ###############*/
 .servicePage {
     display: flex;
     align-items: center;
@@ -13,6 +14,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -30,17 +32,21 @@
 
 /**
  * #########################
- * ## MEDIA QUERY >900px ##
+ * ## MEDIA QUERY >700px ##
  * #########################
  */
 
-@media (min-width: 900px) {
-    .servicePage {
+@media (min-width: 700px) {
+    /* .servicePage {
         margin-bottom: 15vmin;
-    }
+    } */
 
     .servicePage > div {
         width: 80%;
-        margin-bottom: 20vmin;
+    }
+
+    .servicePage > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
     }
 }

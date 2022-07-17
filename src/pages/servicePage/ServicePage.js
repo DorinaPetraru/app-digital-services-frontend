@@ -1,4 +1,4 @@
-//import './ServicePage.css';
+import './ServicePage.css';
 import useService from '../../hooks/useService';
 import { useParams } from 'react-router-dom';
 import { ErrorMessage } from '../../components/ErrorMessage';
@@ -26,14 +26,16 @@ export const ServicePage = () => {
         };
 
         loadComments();
-    }, [token, setComments]);
+    }, [idService, token, setComments]);
 
-    if (loading) return <p>Cargando el servicio seleccionado...</p>;
+    if (loading) return <p>Loading the selected service...</p>;
     if (error) return <ErrorMessage message={error} />;
 
     return (
         <section className="servicePage">
-            <OneService service={service} />
+            <div>
+                <OneService service={service} />
+            </div>
             <div>
                 <CommentsAndFileCompleted
                     setComments={setComments}
