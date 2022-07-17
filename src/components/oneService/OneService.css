@@ -72,12 +72,13 @@
 @media (min-width: 500px) {
     .ulOneServices {
         display: flex;
-        margin-top: 5vmin;
+        margin-top: 1vmin;
     }
     .imagenOneService {
         display: flex;
         align-items: center;
         flex-direction: column;
+        align-self: flex-start;
         width: 45%;
         /* margin: 0.5vmin; */
         padding: 3vmin;

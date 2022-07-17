@@ -13,7 +13,7 @@ h5 {
     height: 10vmin;
     padding: 2vmin 2vmin 2vmin 3vmin;
     cursor: pointer;
-    color: var(--yellow-color);
+    color: var(--blue-color);
     font-size: var(--h1-custom-font-size);
     border-radius: 4vmin;
     box-shadow: inset 0vmin 1vmin 2vmin var(--blue2-color),
