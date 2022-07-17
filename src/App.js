@@ -14,26 +14,20 @@ function App() {
     return (
         <div className="app">
             <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/users" element={<RegisterPage />} />
-                    <Route path="/login" element={<LoginPage />} />
-                    <Route
-                        path="/services/:idService"
-                        element={<ServicePage />}
-                    />
-                    <Route path="/services" element={<CreateServicePage />} />
-                    <Route path="/users/:idUser" element={<UserPage />} />
 
-                    <Route
-                        path="/users/profile"
-                        element={<p>manageProfil</p>}
-                    />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/users" element={<RegisterPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/services/:idService" element={<ServicePage />} />
+                <Route path="/services" element={<CreateServicePage />} />
+                <Route path="/users/:idUser" element={<UserPage />} />
 
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-            </main>
+                <Route path="/users/profile" element={<p>manageProfil</p>} />
+
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+
             <Footer />
         </div>
     );
