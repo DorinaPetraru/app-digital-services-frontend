@@ -5,31 +5,30 @@ import { useEffect, useState } from 'react';
 import { getAllServices } from '../dbCommunication';
 
 const useServices = () => {
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+    const [services, setServices] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
-  useEffect(() => {
-    const loadServices = async () => {
-      try {
-        setLoading(true);
+    useEffect(() => {
+        const loadServices = async () => {
+            try {
+                setLoading(true);
 
-        const data = await getAllServices();
-        console.log('hola');
-        console.log(data);
+                const data = await getAllServices();
+                console.log(data);
 
-        setServices(data.services);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+                setServices(data.services);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    loadServices();
-  }, []);
+        loadServices();
+    }, []);
 
-  return { services, loading, error };
+    return { services, loading, error };
 };
 
 export default useServices;

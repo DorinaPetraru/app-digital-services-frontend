@@ -1,7 +1,7 @@
 import './AllComments.css';
 
-export const AllComments = (comments) => {
-    return comments.length ? (
+export const AllComments = ({ comments }) => {
+    return comments ? (
         <ul className="ulAllCommentFileCompleted">
             {comments.map((comment) => (
                 <li key={comment.id}>

@@ -41,6 +41,8 @@ export const ServicePage = () => {
                     setComments={setComments}
                     comments={comments}
                 />
+            </div>
+            <div>
                 <AllComments comments={comments} />
             </div>
         </section>

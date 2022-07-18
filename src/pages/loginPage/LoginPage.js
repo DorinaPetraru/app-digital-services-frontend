@@ -34,7 +34,7 @@ export const LoginPage = () => {
                 <fieldset>
                     <label htmlFor="email"></label>
                     <input
-                        value={email}
+                        // value={email}
                         type="email"
                         id="email"
                         name="email"
@@ -47,7 +47,7 @@ export const LoginPage = () => {
                 <fieldset>
                     <label htmlFor="password"></label>
                     <input
-                        value={password}
+                        // value={password}
                         type="password"
                         id="password"
                         name="password"

@@ -38,7 +38,7 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
                 <fieldset>
                     <label htmlFor="text"></label>
                     <textarea
-                        value={text}
+                        //  value={text}
                         id="text"
                         name="text"
                         placeholder="Add your comment"
@@ -50,7 +50,7 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
                 <fieldset>
                     <label htmlFor="fileCompleted"></label>
                     <input
-                        value={fileCompleted}
+                        // value={fileCompleted}
                         type="file"
                         id="fileCompleted"
                         name="fileCompleted"

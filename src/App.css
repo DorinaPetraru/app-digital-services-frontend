@@ -7,7 +7,7 @@
 
 .app {
     width: 100%;
-    /* height: 300vmin; */
+    height: 100;
 }
 
 body {
@@ -111,6 +111,8 @@ header > p > .link {
 
 /* ####### FOOTER ###############*/
 footer {
+    position: fixed;
+    bottom: 0;
     height: 10vmin;
     width: 100%;
     text-align: center;

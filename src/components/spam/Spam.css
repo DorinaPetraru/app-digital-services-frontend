@@ -1,0 +1,23 @@
+/*############## Spam ################*/
+
+div.spam {
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 40vmin;
+    border: 0.3vmin solid var(--blue-color);
+    text-align: center;
+    background-color: var(--yellow-color);
+}
+
+div.spam > h2 {
+    margin-top: 2rem;
+    color: var(--grey3-color);
+}
+
+div.spam > button {
+    position: absolute;
+    top: 2vmin;
+    right: 2vmin;
+}

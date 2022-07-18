@@ -36,10 +36,13 @@
 
 .linkOneServices {
     color: var(--blue-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .linkOneServices > figure {
-    width: 100%;
+    width: 80%;
     margin: 5vmin 0vmin;
     text-align: center;
 }
@@ -84,9 +87,12 @@
 */
 
 @media (min-width: 500px) {
+    .ulOneServices {
+        width: 95%;
+    }
     .imagenOneService > .linkOneServices > figure {
         padding: 1vmin;
-        width: 90%;
+        width: 70%;
     }
 }
 
@@ -98,9 +104,7 @@
 
 @media (min-width: 700px) {
     .ulOneServices {
-        display: flex;
-        margin-top: 2vmin;
-        box-shadow: none;
+        width: 85%;
     }
 
     .imagenOneService {
@@ -126,9 +130,9 @@
 */
 
 @media (min-width: 900px) {
-    /* .ulOneServices {
+    .ulOneServices {
         width: 80%;
-    } */
+    }
 }
 
 /**

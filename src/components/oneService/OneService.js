@@ -62,7 +62,7 @@ export const OneService = ({ service }) => {
                 {user.id === ownUser.id ? (
                     <li>
                         <button className="buttonResolved">
-                            Marcar como resuelto
+                            Mark as resolved
                         </button>
                     </li>
                 ) : null}

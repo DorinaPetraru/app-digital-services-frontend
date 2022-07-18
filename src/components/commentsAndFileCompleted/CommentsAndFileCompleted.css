@@ -11,7 +11,6 @@
 /*########## FormComments - CommentsAndFileCompleted ##############*/
 
 .commentsAndFileCompleted > .formComments {
-    margin-bottom: 1rem;
     padding: 1vmin;
     width: 100%;
     border-radius: 1vmin;
@@ -78,6 +77,10 @@
 
 @media (min-width: 500px) {
     /* ## FORMS >500px ## */
+    .commentsAndFileCompleted {
+        width: 95%;
+    }
+
     .commentsAndFileCompleted > .formComments > .buttonForms {
         width: 80%;
     }
@@ -100,11 +103,7 @@
 @media (min-width: 700px) {
     /* ## FORMS >700px ## */
     .commentsAndFileCompleted {
-        width: 45%;
-    }
-
-    .commentsAndFileCompleted > .formComments {
-        box-shadow: none;
+        width: 85%;
     }
 
     .commentsAndFileCompleted > .formComments > .buttonForms {
@@ -130,7 +129,7 @@
     /* ## FORMS >1025px ## */
 
     .commentsAndFileCompleted {
-        box-shadow: none;
+        width: 80%;
     }
 
     .commentsAndFileCompleted > .formComments > .buttonForms {

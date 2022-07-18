@@ -42,7 +42,7 @@ export const CreateServicePage = () => {
                 <fieldset>
                     <label htmlFor="title"></label>
                     <input
-                        value={title}
+                        //  value={title}
                         type="text"
                         id="title"
                         name="title"
@@ -55,7 +55,7 @@ export const CreateServicePage = () => {
                 <fieldset>
                     <label htmlFor="description"></label>
                     <textarea
-                        value={description}
+                        //  value={description}
                         id="description"
                         name="description"
                         placeholder="The description"
