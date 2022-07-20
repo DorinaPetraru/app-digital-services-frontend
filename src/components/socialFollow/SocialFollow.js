@@ -23,7 +23,7 @@ export default function SocialFollow() {
                 </a>
             </div>
             <div>
-                <h3>Follow Andrea Valentina Gallegos Duque</h3>
+                <h3>Follow Andrea Gallegos</h3>
                 <a
                     href="https://www.linkedin.com/in/avalentinagd/"
                     className="linkedin social"
@@ -32,7 +32,7 @@ export default function SocialFollow() {
                 </a>
 
                 <a
-                    href="https://github.com/avalentinagds"
+                    href="https://github.com/avalentinagd"
                     className="gitHub social"
                 >
                     <FontAwesomeIcon icon={faGithub} size="2x" />

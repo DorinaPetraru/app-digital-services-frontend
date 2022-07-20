@@ -1,4 +1,3 @@
-import './CreateServicePage.css';
 import '../../components/cssComponents/Forms.css';
 import { useState } from 'react';
 import { useToken } from '../../context/TokenContext';
@@ -46,6 +45,7 @@ export const CreateServicePage = () => {
                         type="text"
                         id="title"
                         name="title"
+                        maxLength="30"
                         placeholder="The title"
                         required
                         onChange={(e) => setTitle(e.target.value)}

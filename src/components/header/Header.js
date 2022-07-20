@@ -1,4 +1,3 @@
-import './Header.css';
 import '../../components/cssComponents/Buttons.css';
 import { useToken } from '../../context/TokenContext';
 import { Link } from 'react-router-dom';
@@ -25,7 +24,7 @@ const Header = () => {
                             <figure>
                                 <img
                                     src={`http://localhost:4000/${user.photo}`}
-                                    title="Click to see your data"
+                                    title="Click to see your profile"
                                     alt="Photograph of the user who is logged in"
                                 />
                                 <figcaption>{user.name}</figcaption>

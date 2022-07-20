@@ -29,7 +29,7 @@ export const OneService = ({ service }) => {
         <div className="ulOneServices">
             <div className="imagenOneService">
                 <Link className="linkOneServices" to={`/users/${user.id}`}>
-                    <figure title="Photo of the user who created this service">
+                    <figure title="Photo of service owner user">
                         <img
                             src={`http://localhost:4000/${user.photo}`}
                             alt="Photograph of the person who created the service"
@@ -74,7 +74,7 @@ export const OneService = ({ service }) => {
         <div className="ulOneServices">
             <div className="imagenOneService">
                 <Link className="linkOneServices" to={`/users/${user.id}`}>
-                    <figure title="Photo of the user who created this service">
+                    <figure title="Photo of service owner user">
                         <img
                             src={`http://localhost:4000/${user.photo}`}
                             alt="Photograph of the person who created the service"
