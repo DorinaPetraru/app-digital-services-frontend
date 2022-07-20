@@ -1,19 +1,29 @@
-/*########### UL - ALLCOMMENTS ################*/
+/*########### UL - ALLCOMMENTS ###########*/
 
-.ulAllCommentFileCompleted {
+section.sectionAllComments {
     width: 100%;
+    height: 55vmin;
+    display: flex;
+    align-items: center;
+    padding: 6vmin 0.2vmin 5vmin 5vmin;
+    border-radius: 1vmin;
+    box-shadow: inset 0 0 1vmin 0 var(--blue-color);
+    margin-bottom: 10vmin;
+}
+
+ul.ulAllCommentFileCompleted {
+    width: 99%;
+    height: 45vmin;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
-    padding: 3vmin;
-    border-radius: 1vmin;
-    box-shadow: inset 0 0 1vmin 0 var(--blue-color);
-    margin-bottom: 15vmin;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
-/*########### P - ALLCOMMENTS  ##############*/
+/*########### P - ALLCOMMENTS  ###########*/
 
 p.pAllComments {
     width: 100%;
@@ -26,6 +36,23 @@ p.pAllComments {
     margin-bottom: 10vmin;
 }
 
+ul.ulAllCommentFileCompleted > li {
+    width: 100%;
+}
+
+ul.ulAllCommentFileCompleted > li > p:first-child,
+ul.ulAllCommentFileCompleted > li > p:nth-child(2) {
+    font-size: 3.5vmin;
+    margin-bottom: 1vmin;
+}
+
+ul.ulAllCommentFileCompleted > li > p:nth-child(3) {
+    font-size: 3vmin;
+    padding-bottom: 3vmin;
+    border-bottom: 0.1vmin dotted var(--blue-color);
+    margin-bottom: 3vmin;
+}
+
 /**
  * #########################
  * ## MEDIA QUERY >500px ##
@@ -34,8 +61,12 @@ p.pAllComments {
 
 @media (min-width: 500px) {
     p.pAllComments,
-    .ulAllCommentFileCompleted {
+    section.sectionAllComments {
         width: 95%;
+    }
+
+    ul.ulAllCommentFileCompleted > li > p:nth-child(3) {
+        font-size: 2vmin;
     }
 }
 
@@ -47,10 +78,10 @@ p.pAllComments {
 
 @media (min-width: 700px) {
     p.pAllComments,
-    .ulAllCommentFileCompleted {
+    section.sectionAllComments {
         width: 85%;
         align-items: stretch;
-        padding: 4vmin;
+        padding: 5vmin 0.1vmin 4vmin 4vmin;
     }
 }
 
@@ -62,7 +93,7 @@ p.pAllComments {
 
 @media (min-width: 900px) {
     p.pAllComments,
-    .ulAllCommentFileCompleted {
+    section.sectionAllComments {
         width: 80%;
     }
 }

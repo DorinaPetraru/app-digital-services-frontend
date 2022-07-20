@@ -2,7 +2,7 @@ import './HomePage.css';
 import '../../components/cssComponents/ButtonsCreate.css';
 import useServices from '../../hooks/useServices';
 import { ServicesList } from '../../components/serviceList/ServicesList';
-import { ErrorMessage } from '../../components/ErrorMessage';
+import { ErrorMessage } from '../../pages/notFoundPage/ErrorMessage';
 import { Link } from 'react-router-dom';
 import { useToken } from '../../context/TokenContext';
 

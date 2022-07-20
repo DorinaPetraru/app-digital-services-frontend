@@ -7,7 +7,7 @@ export const NotFoundPage = () => {
         <section className="notFound">
             <h1>Not found</h1>
             <Link to="/">
-                <h5 className="noselect"> Go to Home</h5>
+                <h5 className="noselect"> Go to HomePage</h5>
             </Link>
         </section>
     );

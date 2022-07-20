@@ -32,7 +32,7 @@ export const OneService = ({ service }) => {
                     <figure>
                         <img
                             src={`http://localhost:4000/${user.photo}`}
-                            alt="Profile"
+                            alt="Photograph of the person who created the service"
                         />
 
                         <figcaption>
@@ -58,7 +58,9 @@ export const OneService = ({ service }) => {
                     ) : null}
                 </li>
 
-                <li>Service status: {service[0].statusService}</li>
+                <li className="statusOneService">
+                    Service status: {service[0].statusService}
+                </li>
                 {user.id === ownUser.id ? (
                     <li>
                         <button className="buttonResolved">
@@ -75,11 +77,12 @@ export const OneService = ({ service }) => {
                     <figure>
                         <img
                             src={`http://localhost:4000/${user.photo}`}
-                            alt="Profile"
+                            alt="Photograph of the person who created the service"
                         />
-                        <figcaption>{user.name}</figcaption>
+                        <figcaption>
+                            This service was created by {user.name}
+                        </figcaption>
                     </figure>
-                    <div> This service was created by</div>
                 </Link>
             </div>{' '}
             <ul className="descriptionUlOneService">
@@ -98,7 +101,9 @@ export const OneService = ({ service }) => {
                         </a>
                     ) : null}
                 </li>
-                <li>Service status: {service[0].statusService}</li>
+                <li className="statusOneService">
+                    Service status: {service[0].statusService}
+                </li>
             </ul>
         </div>
     ) : null;

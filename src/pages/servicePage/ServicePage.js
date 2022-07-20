@@ -1,7 +1,7 @@
 import './ServicePage.css';
 import useService from '../../hooks/useService';
 import { useParams } from 'react-router-dom';
-import { ErrorMessage } from '../../components/ErrorMessage';
+import { ErrorMessage } from '../../pages/notFoundPage/ErrorMessage';
 import { OneService } from '../../components/oneService/OneService';
 import { AllComments } from '../../components/allComments/AllComments';
 import { CommentsAndFileCompleted } from '../../components/commentsAndFileCompleted/CommentsAndFileCompleted';

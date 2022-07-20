@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     width: 100%;
     min-height: 300vmin;
-    /* justify-content: stretch; */
 }
 
 .servicePage > div {
@@ -18,7 +17,7 @@
     margin: 2vmin 0vmin;
 }
 .servicePage > div:last-child {
-    margin-bottom: 20vmin;
+    margin-bottom: 10vmin;
 }
 
 /**
@@ -35,3 +34,9 @@
  * ## MEDIA QUERY >700px ##
  * #########################
  */
+
+@media (min-width: 700px) {
+    .servicePage {
+        min-height: 250vmin;
+    }
+}

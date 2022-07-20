@@ -13,10 +13,10 @@
 h5 {
     width: 100%;
     height: 10vmin;
-    padding: 2vmin 2vmin 2vmin 3vmin;
+    padding: 3vmin 6vmin 8vmin 6vmin;
     cursor: pointer;
     color: var(--blue-color);
-    font-size: var(--h1-custom-font-size);
+    font-size: var(--custom-font-size);
     border-radius: 4vmin;
     box-shadow: inset 0vmin 1vmin 2vmin var(--blue2-color),
         0vmin 0vmin 1.5vmin rgba(0, 0, 0, 0.15);
@@ -34,6 +34,7 @@ h5 {
     background-size: 200%;
     background-position: right;
     transition: 1s;
+    margin-top: 10vmin;
 }
 
 h5:hover {
@@ -45,4 +46,38 @@ h5:hover {
 
 h5:focus {
     outline: none;
+}
+
+/**
+  * #########################
+  * ## MEDIA QUERY >300px ##
+  * #########################
+  */
+
+@media (min-width: 300px) {
+    :root {
+        --custom-font-size: 4vmin;
+        --h1-custom-font-size: 6vmin;
+    }
+
+    h5 {
+        padding: 3vmin 5vmin 4vmin 5vmin;
+    }
+}
+
+/**
+  * ########################
+  * ## MEDIA QUERY >500px ##
+  * ########################
+  */
+
+@media (min-width: 500px) {
+    :root {
+        --custom-font-size: 3vmin;
+        --h1-custom-font-size: 5vmin;
+    }
+
+    h5 {
+        padding: 3.5vmin 5vmin 2vmin 5vmin;
+    }
 }

@@ -19,7 +19,7 @@ export const RegisterPage = () => {
         setError('');
 
         if (!photo) {
-            setError('Falta añadir su foto de perfil');
+            setError('Missing add your profile picture');
             return;
         }
 

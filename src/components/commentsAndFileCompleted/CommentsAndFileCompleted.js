@@ -24,6 +24,7 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
                 idService,
             });
 
+            e.target.reset();
             setComments([...comments, newComment]);
         } catch (error) {
             setError(error.message);

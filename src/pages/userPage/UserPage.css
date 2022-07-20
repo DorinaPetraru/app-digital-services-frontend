@@ -1,58 +1,60 @@
 /*#### BACKGROUND USER PAGE ########*/
-
-.articleUserPage {
+.card {
     display: flex;
-    min-height: 60vh;
-    align-items: center;
+    gap: 1vmin;
+    width: 100%;
+    flex-wrap: wrap;
     justify-content: center;
 }
-
-/*#### SECTION USER PAGE ########*/
-
-.userPage {
+.card > .cardPerfilArticleUserPage {
     width: 100%;
+    padding: 3vmin;
+    margin: 6vmin 2vmin;
+    border-radius: 1vmin;
+    box-shadow: inset 0 0 1vmin 0 var(--shadow-color);
+}
+
+.card > .cardPerfilArticleUserPage:hover {
+    transform: scale(1.05);
+    transition-duration: 0.95s;
+}
+
+.card > .cardPerfilArticleUserPage > p {
+    margin: 1vmin 1vmin;
+}
+
+.card > .cardPerfilArticleUserPage > .cardNombreUserPage {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    border-radius: 1vmin;
-    padding: 3.5vmin;
-    margin: 5vmin 3vmin;
-    box-shadow: inset 0 0 3vmin 0 var(--blue-color);
+    align-items: center;
+    gap: 5vmin;
+    margin: 4vmin;
 }
 
-/*##### H1 USER PAGE ########*/
-
-.userPage > h1 {
-    color: var(--blue-color);
-}
-
-.userPage > p {
-    width: 100%;
-    text-align: center;
-    border-radius: 1vmin;
-    /* margin-top: 1vmin; */
-    /* padding: 3vmin; */
-}
-
-/*#### P USER PAGE ########*/
-
-.userPage > p:not(:first-of-type) {
-    box-shadow: inset 0 0 1vmin 0 var(--blue-color);
-}
-
-/*#### FIGURE USER PAGE ########*/
-
-.userPage > figure {
-    width: 60%;
-}
-
-.userPage > figure > img {
+.card > .cardPerfilArticleUserPage > .cardNombreUserPage > .imgUserPage {
     border-radius: 50%;
-    margin: 0.5vmin 1.5vmin;
-    width: 100%;
-    object-fit: cover;
+    width: 85%;
+    box-shadow: 0.5vmin 0.5vmin 0.5vmin var(--blue2-color);
+    transform: rotate(-30deg);
+    transition: all 0.3s;
 }
 
+.card > .cardPerfilArticleUserPage > .cardNombreUserPage > .imgUserPage:hover {
+    box-shadow: 0vmin 0.5vmin 0.5vmin 0vmin var(--blue2-color);
+    transform: rotate(0);
+}
+
+.card > .cardPerfilArticleUserPage p.stripe {
+    width: 100%;
+    height: 0.1vmin;
+    background-color: var(--blue2-color);
+    margin: 2vmin 0vmin;
+}
+
+.card > .cardPerfilArticleUserPage > p > span,
+.card > .cardPerfilArticleUserPage > .cardNombreUserPage > p > span {
+    font-weight: 600;
+}
 /**
  * #########################
  * ## MEDIA QUERY >500px ##
@@ -60,20 +62,12 @@
 */
 
 @media (min-width: 500px) {
-    .articleUserPage {
+    .card > .cardPerfilArticleUserPage {
+        width: 95%;
     }
-    .userPage {
+
+    .card > .cardPerfilArticleUserPage > .cardNombreUserPage > .imgUserPage {
         width: 80%;
-    }
-    .userPage > p {
-    }
-
-    .userPage > p:last-child {
-        box-shadow: inset 0 0 15px 0 var(--yellow-color);
-    }
-
-    .userPage > figure {
-        width: 60%;
     }
 }
 
@@ -84,16 +78,45 @@
 */
 
 @media (min-width: 700px) {
-    :root {
-        --custom-font-size: 3vmin;
-        --h1-custom-font-size: 5vmin;
+    .card {
+        margin-top: 2vmin;
     }
 
-    .userPage {
-        width: 40%;
+    .card > .cardPerfilArticleUserPage {
+        padding: 2vmin;
+        margin: 4vmin 2vmin;
+        width: 90%;
     }
 
-    .userPage > figure {
-        width: 39%;
+    .card > .cardPerfilArticleUserPage > .cardNombreUserPage > .imgUserPage {
+        width: 50%;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY > 900px ##
+ * #########################
+*/
+
+@media (min-width: 900px) {
+    .card > .cardPerfilArticleUserPage {
+        width: 70%;
+    }
+}
+
+/**
+ * #########################
+ * ## MEDIA QUERY > 1025px ##
+ * #########################
+*/
+
+@media (min-width: 1025px) {
+    .card > .cardPerfilArticleUserPage {
+        width: 60%;
+    }
+
+    .card > .cardPerfilArticleUserPage > .cardNombreUserPage > .imgUserPage {
+        width: 20%;
     }
 }

@@ -1,16 +1,21 @@
 import useTimeout from '../../hooks/useTimeout';
+import SocialFollow from '../socialFollow/SocialFollow';
 import './Spam.css';
-const Spam = () => {
+
+export const Spam = () => {
     const [show, reset] = useTimeout();
 
     return (
         show && (
-            <div className="spam">
+            <article className="spam">
                 <button onClick={reset}>X</button>
-                <h2>¡Subscríbete a la newsletter!</h2>
-            </div>
+                <p>
+                    <span>¡ Follow us !</span> on our social networks
+                </p>
+                <div>
+                    <SocialFollow />
+                </div>
+            </article>
         )
     );
 };
-
-export default Spam;

@@ -1,6 +1,6 @@
 import './UserPage.css';
 import { useParams } from 'react-router-dom';
-import { ErrorMessage } from '../../components/ErrorMessage';
+import { ErrorMessage } from '../../pages/notFoundPage/ErrorMessage';
 import useUser from '../../hooks/useUser';
 
 export const UserPage = () => {
@@ -11,20 +11,27 @@ export const UserPage = () => {
     if (error) return <ErrorMessage message={error} />;
 
     return (
-        <section className="articleUserPage">
-            <section className="userPage">
-                <h1>Name: {user.name}</h1>
-                <figure>
+        <section className="card">
+            <article className="cardPerfilArticleUserPage">
+                <p className="cardNombreUserPage">
                     <img
+                        className="imgUserPage"
                         src={`http://localhost:4000/${user.photo}`}
-                        alt="Profile"
-                        width="100"
+                        alt="This is the photograph of the person who is logged in"
                     />
-                </figure>
-                {/* <p>Photo: {user.photo}</p> */}
-                <p>Biography: {user.biography}</p>
-                <p>Email: {user.email}</p>
-            </section>
+                    <p>
+                        <span>Name:</span> {user.name}
+                    </p>
+                </p>
+                <p className="stripe"></p>
+                <p className="cardDescription">
+                    <span> Biography:</span> {user.biography}
+                </p>
+                <p className="stripe"></p>
+                <p>
+                    <span>Email:</span> {user.email}
+                </p>
+            </article>
         </section>
     );
 };

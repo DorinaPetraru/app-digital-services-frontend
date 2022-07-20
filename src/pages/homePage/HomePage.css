@@ -26,7 +26,7 @@ section.sectionHomePage > h3 {
 
 @media (min-width: 65px) {
     section.sectionHomePage > h1 {
-        font-size: 11vmin;
+        font-size: 10vmin;
         text-align: end;
         margin-top: 10vmin;
         margin-bottom: 10vmin;
@@ -35,19 +35,15 @@ section.sectionHomePage > h3 {
 
 @media (min-width: 200px) {
     section.sectionHomePage > h3 {
-        font-size: 8vmin;
+        font-size: 6vmin;
         margin-top: 10vmin;
     }
 }
 
 @media (min-width: 500px) {
-    section.sectionHomePage > h3 {
-        font-size: 7vmin;
-    }
-
     section.sectionHomePage > h1 {
-        font-size: 13vmin;
-        margin-bottom: 20vmin;
+        font-size: 12vmin;
+        margin-bottom: 15vmin;
     }
 }
 
@@ -61,6 +57,10 @@ section.sectionHomePage > h3 {
     :root {
         --custom-font-size: 2.5vmin;
         --h1-custom-font-size: 3vmin;
+    }
+
+    section.sectionHomePage > h3 {
+        font-size: 5vmin;
     }
 }
 

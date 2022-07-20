@@ -9,12 +9,13 @@ import { ServicePage } from './pages/servicePage/ServicePage';
 import { NotFoundPage } from './pages/notFoundPage/NotFoundPage';
 import { CreateServicePage } from './pages/createServicePage/CreateServicePage';
 import { UserPage } from './pages/userPage/UserPage';
-import Spam from './components/spam/Spam';
+import { Spam } from './components/spam/Spam';
 
 function App() {
     return (
         <div className="app">
             <Header />
+
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage />} />

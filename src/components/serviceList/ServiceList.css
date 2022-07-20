@@ -18,7 +18,7 @@ section.serviceList {
     cursor: pointer;
     text-align: center;
     border-radius: 1vmin;
-    padding: 6vmin 1vmin;
+    padding: 4vmin 1vmin;
     color: var(--blue-color);
     box-shadow: inset 0 0 15px 0 var(--blue-color);
     background-color: var(--h2-serviceList-color);
@@ -41,8 +41,9 @@ section.serviceList {
     );
 }
 
-.statusServiceHome{
-    font-size: small;
+.statusServiceHome {
+    font-size: 4vmin;
+    margin-top: 1vmin;
 }
 
 /*######## UL LIST SERVICES ########*/
@@ -66,9 +67,12 @@ section.serviceList {
     flex-grow: 1;
 }
 .ulServicesList > li > .link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-decoration: none;
+    margin: 1vmin 1vmin;
 }
-
 
 @media (min-width: 100px) {
     .article {
@@ -79,7 +83,7 @@ section.serviceList {
 @media (min-width: 200px) {
     .article {
         font-size: 6vmin;
-        padding: 7vmin 1vmin;
+        padding: 5vmin 1vmin;
     }
     .ulServicesList {
         margin-bottom: 30vmin;
@@ -88,12 +92,17 @@ section.serviceList {
 }
 
 @media (min-width: 300px) {
-    .article {
+    .article > p {
         font-size: 5vmin;
     }
 
     .ulServicesList {
         margin-bottom: 20vmin;
+    }
+
+    p.statusServiceHome {
+        font-size: 3vmin;
+        margin-top: 1vmin;
     }
 }
 
@@ -118,13 +127,23 @@ section.serviceList {
     }
 
     .article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 35vmin;
         height: 20vmin;
-        font-size: 4vmin;
         text-align: center;
-        padding: 7vmin 3vmin;
+        padding: 3vmin 2vmin;
     }
 
+    .article > p {
+        font-size: 3.5vmin;
+    }
+
+    p.statusServiceHome {
+        font-size: 2.5vmin;
+        margin-top: 1vmin;
+    }
 }
 
 /**
@@ -144,9 +163,14 @@ section.serviceList {
     }
 
     .article {
-        width: 30vmin;
-        height: 15vmin;
+        width: 38vmin;
+        height: 18vmin;
         font-size: 3vmin;
         padding: 5vmin 3vmin;
-        }
+    }
+
+    .statusServiceHome {
+        font-size: 2.3vmin;
+        margin-top: 1vmin;
+    }
 }
