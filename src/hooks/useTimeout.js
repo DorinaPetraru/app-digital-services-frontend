@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useTimeout = (s = 4) => {
+const useTimeout = (s = 10) => {
     const [timeExpired, setTimeExpired] = useState(false);
 
     useEffect(() => {

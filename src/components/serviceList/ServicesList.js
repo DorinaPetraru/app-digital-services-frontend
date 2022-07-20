@@ -7,7 +7,11 @@ export const ServicesList = ({ services }) => {
             <ul className="ulServicesList">
                 {services.map((service) => (
                     <li key={service.id}>
-                        <Link className="link" to={`/services/${service.id}`}>
+                        <Link
+                            title="Click to see the service"
+                            className="link"
+                            to={`/services/${service.id}`}
+                        >
                             <article className="article">
                                 <p>{service.title}</p>
                                 <p className="statusServiceHome">

@@ -14,7 +14,9 @@ export const HomePage = () => {
 
     return (
         <section className="sectionHomePage">
-            <h1>Digital Services, always by your side</h1>
+            <h1 title="Digital services website">
+                Digital Services, always by your side
+            </h1>
 
             {token ? (
                 <Link to="/services">

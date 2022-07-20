@@ -20,6 +20,18 @@
     margin-bottom: 10vmin;
 }
 
+/*############## btnEffect #############*/
+.servicePage > a > button.btnEffect {
+    font-weight: 600;
+    color: var(--blue-color);
+    margin-bottom: 10vmin;
+}
+
+.servicePage > .startButton > a > button.btnEffect {
+    font-weight: 800;
+    margin-bottom: 30vmin;
+}
+
 /**
     * #########################
     * ## MEDIA QUERY >500px ##

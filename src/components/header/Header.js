@@ -25,6 +25,7 @@ const Header = () => {
                             <figure>
                                 <img
                                     src={`http://localhost:4000/${user.photo}`}
+                                    title="Click to see your data"
                                     alt="Photograph of the user who is logged in"
                                 />
                                 <figcaption>{user.name}</figcaption>

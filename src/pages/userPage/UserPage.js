@@ -12,7 +12,10 @@ export const UserPage = () => {
 
     return (
         <section className="card">
-            <article className="cardPerfilArticleUserPage">
+            <article
+                title="This is the photograph of the person who is logged in"
+                className="cardPerfilArticleUserPage"
+            >
                 <p className="cardNombreUserPage">
                     <img
                         className="imgUserPage"

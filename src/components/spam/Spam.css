@@ -2,18 +2,18 @@
 
 .spam {
     position: fixed;
-    top: 30%;
-    left: 35%;
+    top: 18%;
+    left: 30%;
     width: 50%;
-    height: 40vmin;
     text-align: center;
+    overflow: hidden;
     border-radius: 3vmin;
-    background-color: var(--blue-color);
-    border: 0.3vmin solid var(--blue-color);
+    background-color: var(--granate-color);
+    box-shadow: inset 0 0 3vmin 0 var(--grey3-color);
 }
 
 .spam > p {
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: var(--grey3-color);
 }
 

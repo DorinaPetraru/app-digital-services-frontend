@@ -8,6 +8,8 @@ import { CommentsAndFileCompleted } from '../../components/commentsAndFileComple
 import { useToken } from '../../context/TokenContext';
 import { useEffect, useState } from 'react';
 import { getAllComments } from '../../dbCommunication';
+import { Link } from 'react-router-dom';
+import '../../components/cssComponents/Buttons.css';
 
 export const ServicePage = () => {
     const [token] = useToken();
@@ -32,7 +34,7 @@ export const ServicePage = () => {
     if (error) return <ErrorMessage message={error} />;
 
     return (
-        <section className="servicePage">
+        <section id="start" className="servicePage">
             <div>
                 <OneService service={service} />
             </div>
@@ -44,6 +46,19 @@ export const ServicePage = () => {
             </div>
             <div>
                 <AllComments comments={comments} />
+            </div>
+            <Link to="/">
+                <button className="btnEffect">Go to HomePage</button>
+            </Link>
+            <div className="startButton">
+                <a href="#start">
+                    <button
+                        className="btnEffect"
+                        title="Go to the top of this page"
+                    >
+                        Top of page
+                    </button>
+                </a>
             </div>
         </section>
     );
