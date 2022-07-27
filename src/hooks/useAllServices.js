@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { getAllServices } from '../dbCommunication';
 
-const useServices = () => {
+const useAllServices = () => {
     const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
@@ -15,7 +15,6 @@ const useServices = () => {
                 setLoading(true);
 
                 const data = await getAllServices();
-                console.log(data);
 
                 setServices(data.services);
             } catch (error) {
@@ -31,4 +30,4 @@ const useServices = () => {
     return { services, loading, error };
 };
 
-export default useServices;
+export default useAllServices;

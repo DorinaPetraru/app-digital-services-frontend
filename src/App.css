@@ -5,9 +5,9 @@
     font-size: var(--custom-font-size);
 }
 
-.app {
+main {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -32,7 +32,7 @@ body {
     --grey2-color: rgb(178, 182, 189, 1);
     --grey3-color: rgba(231, 232, 235);
     --h2-serviceList-color: rgba(231, 232, 235, 0.7);
-    --shadow-color: rgb(50, 50, 50); /* sombreado en oneservice LG*/
+    --shadow-color: rgb(50, 50, 50);
 
     --custom-font-size: 5vmin;
     --h1-custom-font-size: 7vmin;
@@ -46,83 +46,6 @@ h1 {
 a {
     text-decoration: none;
     color: var(--yellow-color);
-}
-
-/* #######  HEADER  ####### */
-header {
-    width: 100%;
-    padding-bottom: 0.5vmin;
-    background-color: var(--blue-color);
-}
-
-header > nav > div.divHeader {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-header > nav > div.divHeader > a > figure {
-    width: 7vmin;
-    margin: 0 1.5vmin;
-}
-
-header > nav > div.divHeader > a > figure > img {
-    object-fit: cover;
-    border-radius: 50%;
-    width: 6vmin;
-    height: 6vmin;
-    padding: 0.5vmin;
-    box-shadow: inset 0 0 1vmin 0 var(--grey3-color);
-}
-
-header > nav > div.divHeader > a > figure > figcaption {
-    display: none;
-}
-
-header > nav > .divHeader > button.btnEffect {
-    color: var(--grey3-color);
-    margin-top: 4vmin;
-    font-weight: 500;
-}
-
-/* ####### LOGO ####### */
-
-header > p > .link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.5vmin;
-}
-
-.spanDsHeader {
-    margin: 1vmin;
-    padding: 2vmin;
-    cursor: pointer;
-    border-radius: 5vmin;
-    color: var(--grey3-color);
-    box-shadow: inset 0 0 1vmin 0 var(--grey3-color);
-}
-
-.spanDigitalHeader {
-    color: var(--grey3-color);
-    font-weight: 400;
-}
-
-.spanServicesHeader {
-    color: var(--yellow-color);
-}
-
-/* ####### FOOTER ####### */
-footer {
-    position: fixed;
-    bottom: 0;
-    height: 10vmin;
-    width: 100%;
-    text-align: center;
-    background-color: var(--blue-color);
-    color: var(--write-color);
-    padding: 3vmin 0;
-    font-size: 8vmin;
 }
 
 /**
@@ -167,37 +90,18 @@ footer {
     a {
         color: var(--blue-color);
     }
+}
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--write-color);
-        margin-top: 1vmin;
-    }
+/**
+  * #########################
+  * ## MEDIA QUERY >900px ##
+  * #########################
+  */
 
-    .spanDsHeader {
-        box-shadow: inset 0 0 1.3vmin 0 var(--blue-color);
-        color: var(--blue-color);
-        font-weight: 600;
-    }
-
-    .spanDigitalHeader {
-        color: var(--blue-color);
-        font-weight: 700;
-    }
-
-    .spanServicesHeader {
-        font-weight: 700;
-    }
-
-    header > nav > div.linkHeader {
-        display: flex;
-    }
-
-    header > nav > div.divHeader > button.btnEffect {
-        color: var(--blue-color);
-        margin-top: 3vmin;
+@media (min-width: 900px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 3.5vmin;
     }
 }
 

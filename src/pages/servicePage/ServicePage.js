@@ -14,7 +14,7 @@ import '../../components/cssComponents/Buttons.css';
 export const ServicePage = () => {
     const [token] = useToken();
     const { idService } = useParams();
-    const { service, loading, error } = useService(idService);
+    const { service, loading, error, setService } = useService(idService);
     const [comments, setComments] = useState(null);
 
     useEffect(() => {
@@ -36,7 +36,7 @@ export const ServicePage = () => {
     return (
         <section id="start" className="servicePage">
             <div>
-                <OneService service={service} />
+                <OneService service={service} setService={setService} />
             </div>
             <div>
                 <CommentsAndFileCompleted

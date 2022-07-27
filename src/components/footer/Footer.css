@@ -1,0 +1,10 @@
+/* ####### FOOTER ####### */
+footer {
+    height: 10vmin;
+    width: 100%;
+    text-align: center;
+    background-color: var(--blue-color);
+    color: var(--write-color);
+    padding: 3vmin 0;
+    font-size: 8vmin;
+}

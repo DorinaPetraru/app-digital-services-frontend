@@ -1,13 +1,13 @@
 import './HomePage.css';
 import '../../components/cssComponents/ButtonsCreate.css';
-import useServices from '../../hooks/useServices';
+import useAllServices from '../../hooks/useAllServices';
 import { ServicesList } from '../../components/serviceList/ServicesList';
 import { ErrorMessage } from '../../pages/notFoundPage/ErrorMessage';
 import { Link } from 'react-router-dom';
 import { useToken } from '../../context/TokenContext';
 
 export const HomePage = () => {
-    const { services, loading, error } = useServices();
+    const { services, loading, error } = useAllServices();
     const [token] = useToken();
     if (loading) return <p>Loading list of all services...</p>;
     if (error) return <ErrorMessage message={error} />;

@@ -4,26 +4,25 @@ import { Link } from 'react-router-dom';
 import { updateServiceStatus } from '../../dbCommunication';
 import { useToken } from '../../context/TokenContext';
 import useUser from '../../hooks/useUser';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export const OneService = ({ service }) => {
+export const OneService = ({ service, setService }) => {
     const [token] = useToken();
     const ownUser = useOwnUser(token);
-    const { user } = useUser(service[0].idUser);
-    const [statusService, setStatusService] = useState('pending');
+    const { user } = useUser(service.idUser);
 
     useEffect(() => {
         const loadComments = async () => {
             try {
-                await updateServiceStatus(service[0].id, token);
-                setStatusService(service[0].statusService);
+                await updateServiceStatus(service.id, token);
+                setService({ ...service, statusService: 'resolved' });
             } catch (error) {
                 console.error(error);
             }
         };
 
         loadComments();
-    }, [service, token, statusService]);
+    }, [service, token]);
 
     return ownUser && user ? (
         <div className="ulOneServices">
@@ -42,15 +41,15 @@ export const OneService = ({ service }) => {
                 </Link>
             </div>{' '}
             <ul className="descriptionUlOneService">
-                <h2>Title: {service[0].title}</h2>
+                <h2>Title: {service.title}</h2>
                 <li>
-                    Service description: <p>{service[0].description}</p>
+                    Service description: <p>{service.description}</p>
                 </li>
                 <li>
-                    {service[0].file ? (
+                    {service.file ? (
                         <a
                             className="aDownloadFile"
-                            href={`http://localhost:4000/${service[0].file}`}
+                            href={`http://localhost:4000/${service.file}`}
                             download
                         >
                             Download file
@@ -59,7 +58,7 @@ export const OneService = ({ service }) => {
                 </li>
 
                 <li className="statusOneService">
-                    Service status: {service[0].statusService}
+                    Service status: {service.statusService}
                 </li>
                 {user.id === ownUser.id ? (
                     <li>
@@ -86,15 +85,15 @@ export const OneService = ({ service }) => {
                 </Link>
             </div>{' '}
             <ul className="descriptionUlOneService">
-                <h2>Title: {service[0].title}</h2>
+                <h2>Title: {service.title}</h2>
                 <li>
-                    Service description: <p>{service[0].description}</p>
+                    Service description: <p>{service.description}</p>
                 </li>
                 <li>
-                    {service[0].file ? (
+                    {service.file ? (
                         <a
                             className="aDownloadFile"
-                            href={`http://localhost:4000/${service[0].file}`}
+                            href={`http://localhost:4000/${service.file}`}
                             download
                         >
                             Download file
@@ -102,7 +101,7 @@ export const OneService = ({ service }) => {
                     ) : null}
                 </li>
                 <li className="statusOneService">
-                    Service status: {service[0].statusService}
+                    Service status: {service.statusService}
                 </li>
             </ul>
         </div>

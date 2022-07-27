@@ -7,14 +7,12 @@
     align-items: flex-end;
     width: 100%;
     border-radius: 1vmin;
-    box-shadow: inset 0 0 1vmin 0 var(--blue-color);
     padding: 3vmin;
     margin-top: 3vmin;
 }
 
 /*####  FIGURE Y DESCRIPTION OneServices ########*/
 
-/* .imagenOneService, */
 .descriptionUlOneService {
     border-radius: 1vmin;
     margin: 2vmin 0vmin;
@@ -39,7 +37,6 @@
     color: var(--blue-color);
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .linkOneServices > figure {
@@ -107,12 +104,6 @@
     box-shadow: inset 0 0 1vmin 0 var(--shadow-color);
 }
 
-@media (min-width: 300px) {
-    .linkOneServices > figure {
-        margin: 5vmin 19vmin 5vmin 20vmin;
-    }
-}
-
 /**
  * #########################
  * ## MEDIA QUERY >500px ##
@@ -121,6 +112,7 @@
 
 @media (min-width: 500px) {
     .ulOneServices {
+        box-shadow: inset 0 0 1vmin 0 var(--blue-color);
         width: 95%;
     }
     .imagenOneService > .linkOneServices > figure {
@@ -128,11 +120,6 @@
         width: 70%;
         margin: 5vmin 21vmin 5vmin 26vmin;
     }
-
-    /* .linkOneServices > figure {
-        width: 80%;
-        margin: 5vmin 19vmin 5vmin 20vmin;
-    } */
 }
 
 /**

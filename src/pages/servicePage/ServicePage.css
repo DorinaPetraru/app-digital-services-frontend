@@ -31,24 +31,3 @@
     font-weight: 800;
     margin-bottom: 30vmin;
 }
-
-/**
-    * #########################
-    * ## MEDIA QUERY >500px ##
-    * #########################
-    */
-
-@media (min-width: 500px) {
-}
-
-/**
- * #########################
- * ## MEDIA QUERY >700px ##
- * #########################
- */
-
-@media (min-width: 700px) {
-    .servicePage {
-        min-height: 250vmin;
-    }
-}

@@ -12,7 +12,7 @@ const useService = (id) => {
 
                 const data = await getOneService(id);
 
-                setService(data.service);
+                setService(data.service[0]);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -23,7 +23,7 @@ const useService = (id) => {
         loadService();
     }, [id]);
 
-    return { service, loading, error };
+    return { service, loading, error, setService };
 };
 
 export default useService;

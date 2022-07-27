@@ -13,7 +13,7 @@
 h5 {
     width: 100%;
     height: 10vmin;
-    padding: 3vmin 6vmin 8vmin 6vmin;
+    padding: 2vmin 6vmin 2vmin 6vmin;
     cursor: pointer;
     color: var(--blue-color);
     font-size: 4vmin;
@@ -49,35 +49,13 @@ h5:focus {
 }
 
 /**
-  * #########################
-  * ## MEDIA QUERY >300px ##
-  * #########################
-  */
-
-@media (min-width: 300px) {
-    :root {
-        --custom-font-size: 4vmin;
-        --h1-custom-font-size: 6vmin;
-    }
-
-    h5 {
-        padding: 3vmin 5vmin 4vmin 5vmin;
-    }
-}
-
-/**
   * ########################
   * ## MEDIA QUERY >500px ##
   * ########################
   */
 
 @media (min-width: 500px) {
-    :root {
-        --custom-font-size: 3vmin;
-        --h1-custom-font-size: 5vmin;
-    }
-
     h5 {
-        padding: 3.5vmin 5vmin 2vmin 5vmin;
+        padding: 2vmin 5vmin 2vmin 5vmin;
     }
 }

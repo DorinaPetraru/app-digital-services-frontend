@@ -12,7 +12,7 @@
 
 .socialContainer > div > h3 {
     margin: 3vmin 0vmin;
-    color: var(--grey3-color);
+    color: var(--blue-color);
 }
 
 .socialContainer > div > a.social {
@@ -23,20 +23,12 @@
 
 .socialContainer > div > a.social:hover {
     transform: translateY(-0.5vmin);
+    color: var(--shadow-color);
 }
 
 a.linkedin,
 a.gitHub {
-    color: var(--grey3-color);
-}
-
-/**
-    * #########################
-    * ## MEDIA QUERY >500px ##
-    * #########################
-    */
-
-@media (min-width: 500px) {
+    color: var(--blue-color);
 }
 
 /**

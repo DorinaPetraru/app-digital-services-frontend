@@ -1,3 +1,4 @@
+import './Header.css';
 import '../../components/cssComponents/Buttons.css';
 import { useToken } from '../../context/TokenContext';
 import { Link } from 'react-router-dom';
