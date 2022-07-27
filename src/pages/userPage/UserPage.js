@@ -24,15 +24,15 @@ export const UserPage = () => {
                         <span className="spanServicesHeader">Services</span>
                     </Link>
                 </p>
+                <p>
+                    Visit our Home Page and discover a variety of services both
+                    to solve and ideas to create new services.
+                </p>
                 <div className="stripe"></div>
                 <p>
                     Welcome <span>{user.name} </span> to our website, we help
                     you solve your digital services or you can help other users
                     solve their digital needs.
-                </p>
-                <p>
-                    Visit our Home Page and discover a variety of services both
-                    to solve and ideas to create new services.
                 </p>
             </article>
 

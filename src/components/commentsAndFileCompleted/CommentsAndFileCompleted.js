@@ -35,6 +35,14 @@ export const CommentsAndFileCompleted = ({ comments, setComments }) => {
 
     return (
         <article className="commentsAndFileCompleted">
+            <p>
+                If you want to know more about the user who created this
+                service, click on his photo.
+            </p>
+            <p>
+                If you know how to solve this digital need, add a comment and
+                the complete file to solve this digital service.
+            </p>
             <form className="formComments" onSubmit={handleForm}>
                 <fieldset>
                     <label htmlFor="text"></label>

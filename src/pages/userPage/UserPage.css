@@ -145,6 +145,10 @@
         width: 40%;
     }
 
+    .card > .cardPerfilArticleUserPageTwo {
+        min-height: 75vh;
+    }
+
     .card > .cardPerfilArticleUserPageTwo > .cardNombreUserPage > .imgUserPage {
         width: 55%;
     }
@@ -159,15 +163,15 @@
     }
 
     .card > .cardPerfilArticleUserPageOne {
-        animation-delay: 4s;
+        animation-delay: 3s;
     }
 
     .card > .cardPerfilArticleUserPageTwo {
-        animation-delay: 2s;
+        animation-delay: 1s;
     }
 
     .card > .cardPerfilArticleUserPageThree {
-        animation-delay: 6s;
+        animation-delay: 5s;
     }
 
     @keyframes secuencia {

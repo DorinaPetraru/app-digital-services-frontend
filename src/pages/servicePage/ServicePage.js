@@ -37,13 +37,12 @@ export const ServicePage = () => {
         <section id="start" className="servicePage">
             <div>
                 <OneService service={service} setService={setService} />
-            </div>
-            <div>
                 <CommentsAndFileCompleted
                     setComments={setComments}
                     comments={comments}
                 />
             </div>
+
             <div>
                 <AllComments comments={comments} />
             </div>

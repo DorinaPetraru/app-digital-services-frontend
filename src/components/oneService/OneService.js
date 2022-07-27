@@ -26,20 +26,20 @@ export const OneService = ({ service, setService }) => {
 
     return ownUser && user ? (
         <div className="ulOneServices">
-            <div className="imagenOneService">
-                <Link className="linkOneServices" to={`/users/${user.id}`}>
-                    <figure title="Photo of service owner user">
-                        <img
-                            src={`http://localhost:4000/${user.photo}`}
-                            alt="Photograph of the person who created the service"
-                        />
+            {/* <div className="imagenOneService"> */}
+            <Link className="linkOneServices" to={`/users/${user.id}`}>
+                <figure title="Photo of service owner user">
+                    <img
+                        src={`http://localhost:4000/${user.photo}`}
+                        alt="Photograph of the person who created the service"
+                    />
 
-                        <figcaption>
-                            This service was created by {user.name}
-                        </figcaption>
-                    </figure>
-                </Link>
-            </div>{' '}
+                    <figcaption>
+                        This service was created by {user.name}
+                    </figcaption>
+                </figure>
+            </Link>
+            {/* </div>{' '} */}
             <ul className="descriptionUlOneService">
                 <h2>Title: {service.title}</h2>
                 <li>
