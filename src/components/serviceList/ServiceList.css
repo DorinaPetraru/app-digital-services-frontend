@@ -5,7 +5,6 @@ section.serviceList {
     justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    margin-top: 5vmin;
     width: 100%;
     height: 100%;
 }
@@ -17,7 +16,7 @@ section.serviceList {
     height: 20vmin;
     cursor: pointer;
     text-align: center;
-    border-radius: 1vmin;
+    border-radius: 2vmin;
     padding: 4vmin 1vmin;
     color: var(--blue-color);
     box-shadow: inset 0 0 15px 0 var(--blue-color);
@@ -41,6 +40,15 @@ section.serviceList {
     );
 }
 
+.article > p {
+    font-size: 5vmin;
+}
+
+p.statusServiceHome {
+    font-size: 3.5vmin;
+    margin-top: 1vmin;
+}
+
 .statusServiceHome {
     font-size: 4vmin;
     margin-top: 1vmin;
@@ -60,7 +68,7 @@ section.serviceList {
     width: 90%;
     height: 100%;
     margin-top: 10vmin;
-    margin-bottom: 40vmin;
+    margin-bottom: 25vmin;
 }
 
 .ulServicesList > li {
@@ -74,13 +82,13 @@ section.serviceList {
     margin: 1vmin 1vmin;
 }
 
-@media (min-width: 100px) {
+/* @media (min-width: 100px) {
     .article {
         font-size: 7vmin;
     }
-}
+} */
 
-@media (min-width: 200px) {
+/* @media (min-width: 200px) {
     .article {
         font-size: 6vmin;
         padding: 5vmin 1vmin;
@@ -89,8 +97,8 @@ section.serviceList {
         margin-bottom: 30vmin;
         margin-top: 3vmin;
     }
-}
-
+} */
+/* 
 @media (min-width: 300px) {
     .article > p {
         font-size: 5vmin;
@@ -104,7 +112,7 @@ section.serviceList {
         font-size: 3vmin;
         margin-top: 1vmin;
     }
-}
+} */
 
 /**
  * #########################
@@ -117,6 +125,7 @@ section.serviceList {
         --custom-font-size: 2.5vmin;
         --h1-custom-font-size: 3vmin;
     }
+
     .ulServicesList {
         display: flex;
         flex-direction: row;
@@ -157,6 +166,11 @@ section.serviceList {
         --custom-font-size: 2vmin;
         --h1-custom-font-size: 2.5vmin;
     }
+
+    section.serviceList {
+        margin-top: 5vmin;
+    }
+
     .ulServicesList {
         margin: 3vmin 0vmin;
         margin-bottom: 20vmin;

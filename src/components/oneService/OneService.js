@@ -22,11 +22,10 @@ export const OneService = ({ service, setService }) => {
         };
 
         loadComments();
-    }, [service, token]);
+    }, [service, setService, token]);
 
     return ownUser && user ? (
         <div className="ulOneServices">
-            {/* <div className="imagenOneService"> */}
             <Link className="linkOneServices" to={`/users/${user.id}`}>
                 <figure title="Photo of service owner user">
                     <img
@@ -39,7 +38,6 @@ export const OneService = ({ service, setService }) => {
                     </figcaption>
                 </figure>
             </Link>
-            {/* </div>{' '} */}
             <ul className="descriptionUlOneService">
                 <h2>Title: {service.title}</h2>
                 <li>

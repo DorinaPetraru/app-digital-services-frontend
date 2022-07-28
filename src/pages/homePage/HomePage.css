@@ -12,40 +12,19 @@ section.sectionHomePage {
 /*########  H1, H3 HOME PAGE  ########*/
 
 section.sectionHomePage > h1 {
+    width: 90%;
     color: var(--blue-color);
-    font-size: 10vmin;
+    font-size: 9vmin;
     text-align: center;
     margin: 5vmin;
 }
 
 section.sectionHomePage > h3 {
-    font-size: 9vmin;
+    font-size: 7vmin;
     color: var(--yellow-color);
     margin-top: 15vmin;
 }
 
-@media (min-width: 65px) {
-    section.sectionHomePage > h1 {
-        font-size: 10vmin;
-        text-align: end;
-        margin-top: 10vmin;
-        margin-bottom: 10vmin;
-    }
-}
-
-@media (min-width: 200px) {
-    section.sectionHomePage > h3 {
-        font-size: 6vmin;
-        margin-top: 10vmin;
-    }
-}
-
-@media (min-width: 500px) {
-    section.sectionHomePage > h1 {
-        font-size: 12vmin;
-        margin-bottom: 15vmin;
-    }
-}
 
 /**
  * #########################
@@ -57,6 +36,12 @@ section.sectionHomePage > h3 {
     :root {
         --custom-font-size: 2.5vmin;
         --h1-custom-font-size: 3vmin;
+    }
+
+    section.sectionHomePage > h1 {
+        text-align: start;
+        font-size: 7vmin;
+        margin-top: 11vmin;
     }
 
     section.sectionHomePage > h3 {
@@ -76,7 +61,8 @@ section.sectionHomePage > h3 {
         --h1-custom-font-size: 2.5vmin;
     }
     section.sectionHomePage > h1 {
-        font-size: 15vmin;
-        margin-bottom: 20vmin;
+        font-size: 9vmin;
+        margin-bottom: 18vmin;
+        margin-top: 18vmin;
     }
 }

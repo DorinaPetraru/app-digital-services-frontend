@@ -6,5 +6,34 @@ footer {
     background-color: var(--blue-color);
     color: var(--write-color);
     padding: 3vmin 0;
-    font-size: 8vmin;
+}
+
+footer > p {
+    font-size: 3.2vmin;
+    padding-top: 0.35vmin;
+}
+
+/**
+  * #########################
+  * ## MEDIA QUERY >700px ##
+  * #########################
+**/
+
+@media (min-width: 700px) {
+    footer > p {
+        font-size: 2.5vmin;
+        padding-top: 0.6vmin;
+    }
+}
+
+/**
+  * #########################
+  * ## MEDIA QUERY >1025px ##
+  * #########################
+**/
+
+@media (min-width: 1025px) {
+    footer > p {
+        font-size: 2.2vmin;
+    }
 }

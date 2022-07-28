@@ -13,7 +13,6 @@ header > nav > div.divHeader {
 
 header > nav > div.divHeader > a > figure {
     width: 7vmin;
-    margin: 0 1.5vmin;
 }
 
 header > nav > div.divHeader > a > figure > img {
@@ -22,6 +21,7 @@ header > nav > div.divHeader > a > figure > img {
     width: 7vmin;
     height: 7vmin;
     padding: 0.5vmin;
+    margin-right: 2vmin;
     box-shadow: inset 0 0 1vmin 0 var(--grey3-color);
 }
 
@@ -31,8 +31,7 @@ header > nav > div.divHeader > a > figure > figcaption {
 
 header > nav > .divHeader > button.btnEffect {
     color: var(--grey3-color);
-    margin-top: 4vmin;
-    font-weight: 500;
+    font-size: 3.3vmin;
 }
 
 /* ####### LOGO ####### */
@@ -66,7 +65,7 @@ header > p > .link {
   * #########################
   * ## MEDIA QUERY >700px ##
   * #########################
-  */
+**/
 
 @media (min-width: 700px) {
     :root {
@@ -77,6 +76,10 @@ header > p > .link {
     .link > a,
     a {
         color: var(--blue-color);
+    }
+
+    .link {
+        margin-left: 2vmin;
     }
 
     header {
@@ -106,8 +109,47 @@ header > p > .link {
         display: flex;
     }
 
+    header > nav > div.divHeader > a > figure > img {
+        width: 6.5vmin;
+        height: 6.5vmin;
+    }
+
     header > nav > div.divHeader > button.btnEffect {
         color: var(--blue-color);
-        margin-top: 3vmin;
+        font-size: 2.5vmin;
+        margin-right: 2.5vmin;
+    }
+}
+
+/**
+  * #########################
+  * ## MEDIA QUERY >1025px ##
+  * #########################
+**/
+
+@media (min-width: 1025px) {
+    :root {
+        --custom-font-size: 2.5vmin;
+        --h1-custom-font-size: 4vmin;
+    }
+
+    .link {
+        margin-left: 3vmin;
+    }
+
+    .spanDsHeader,
+    .spanDigitalHeader,
+    .spanServicesHeader {
+        font-size: 2.8vmin;
+    }
+
+    header > nav > div.divHeader > a > figure > img {
+        width: 7vmin;
+        height: 7vmin;
+    }
+
+    header > nav > div.divHeader > button.btnEffect {
+        font-size: 2.3vmin;
+        margin-right: 2vmin;
     }
 }

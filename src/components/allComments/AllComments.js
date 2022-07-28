@@ -3,6 +3,7 @@ import './AllComments.css';
 export const AllComments = ({ comments }) => {
     return comments ? (
         <section className="sectionAllComments">
+            <p>Comments:</p>
             <ul className="ulAllCommentFileCompleted">
                 {comments.map((comment) => (
                     <li key={comment.id}>
