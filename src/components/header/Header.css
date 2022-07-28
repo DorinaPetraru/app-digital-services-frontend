@@ -18,7 +18,7 @@ header > nav > div.divHeader > a > figure {
 header > nav > div.divHeader > a > figure > img {
     object-fit: cover;
     border-radius: 50%;
-    width: 7vmin;
+    width: 6vmin;
     height: 7vmin;
     padding: 0.5vmin;
     margin-right: 2vmin;
@@ -99,11 +99,6 @@ header > p > .link {
         display: flex;
     }
 
-    header > nav > div.divHeader > a > figure > img {
-        width: 6.5vmin;
-        height: 6.5vmin;
-    }
-
     header > nav > div.divHeader > button.btnEffect {
         color: var(--blue-color);
         font-size: 2.5vmin;
@@ -135,7 +130,7 @@ header > p > .link {
 
     header > nav > div.divHeader > a > figure > img {
         width: 7vmin;
-        height: 7vmin;
+        height: 8vmin;
     }
 
     header > nav > div.divHeader > button.btnEffect {

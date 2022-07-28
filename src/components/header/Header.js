@@ -7,7 +7,7 @@ import useOwnUser from '../../hooks/useOwnUser';
 const Header = () => {
     const [token, setToken] = useToken();
 
-    const user = useOwnUser(token);
+    const { ownUser } = useOwnUser(token);
     return (
         <header>
             <p>
@@ -19,16 +19,16 @@ const Header = () => {
             </p>
 
             <nav>
-                {token && user ? (
+                {token && ownUser ? (
                     <div className="divHeader">
-                        <Link to={`/users/${user.id}`}>
+                        <Link to={`/users`}>
                             <figure>
                                 <img
-                                    src={`http://localhost:4000/${user.photo}`}
+                                    src={`http://localhost:4000/${ownUser.photo}`}
                                     title="Click to see your profile"
                                     alt="Photograph of the user who is logged in"
                                 />
-                                <figcaption>{user.name}</figcaption>
+                                <figcaption>{ownUser.name}</figcaption>
                             </figure>
                         </Link>
                         <button
@@ -42,7 +42,7 @@ const Header = () => {
                     <div className="linkHeader">
                         <p>
                             <button className="btnEffect">
-                                <Link to="/users">Register</Link>
+                                <Link to="/register">Register</Link>
                             </button>
                         </p>
                         <p>

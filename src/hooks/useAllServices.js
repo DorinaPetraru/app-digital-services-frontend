@@ -1,6 +1,3 @@
-// se va a encargar de tener un estado,
-// va a exportar información sobre la carga de la petición
-
 import { useEffect, useState } from 'react';
 import { getAllServices } from '../dbCommunication';
 

@@ -2,22 +2,26 @@ import { useEffect, useState } from 'react';
 import { getOwnUser } from '../dbCommunication';
 
 const useOwnUser = (token) => {
-  const [user, setUser] = useState(null);
+    const [ownUser, setOwnUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
-  useEffect(() => {
-    const ownUserData = async () => {
-      try {
-        const data = await getOwnUser({ token });
-        setUser(data.user);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    useEffect(() => {
+        const ownUserData = async () => {
+            try {
+                const data = await getOwnUser(token);
+                setOwnUser(data.user);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    if (token) ownUserData();
-  }, [token]);
+        if (token) ownUserData();
+    }, [token]);
 
-  return user;
+    return { ownUser, loading, error };
 };
 
 export default useOwnUser;

@@ -4,7 +4,7 @@ section.serviceList {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     height: 100%;
 }
@@ -81,7 +81,7 @@ p.statusServiceHome {
 
 /**
  * #########################
- * ##        TABLET       ##
+ * ## MEDIA QUERY > 700px ##
  * #########################
 */
 
@@ -114,7 +114,7 @@ p.statusServiceHome {
 
 /**
  * #########################
- * ##      ORDENADOR      ##
+ * ## MEDIA QUERY > 1025px ##
  * #########################
 */
 

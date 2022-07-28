@@ -5,29 +5,23 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    /* box-shadow: inset 0 0 1vmin 0 var(--shadow-color);
+    border-radius: 1vmin; */
 }
 
 .card > .cardPerfilArticleUserPageOne,
-.card > .cardPerfilArticleUserPageTwo,
-.card > .cardPerfilArticleUserPageThree {
+.card > .cardPerfilArticleUserPageTwo {
     width: 95%;
-    min-height: 70vh;
-    padding: 3vmin;
-    margin: 6vmin 2vmin;
-    border-radius: 1vmin;
-
-    box-shadow: inset 0 0 1vmin 0 var(--shadow-color);
+    min-height: 68vh;
+    padding: 2vmin;
+    margin: 0vmin 2vmin;
 }
 
-.card > .cardPerfilArticleUserPageOne:hover,
-.card > .cardPerfilArticleUserPageTwo:hover,
-.card > .cardPerfilArticleUserPageThree:hover {
-    transform: scale(1.1);
-    transition-duration: 0.95s;
+.card > .cardPerfilArticleUserPageTwo {
+    margin-top: 2vmin;
 }
 
-.card > .cardPerfilArticleUserPageOne,
-.card > .cardPerfilArticleUserPageThree {
+.card > .cardPerfilArticleUserPageOne {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,10 +29,19 @@
     flex-wrap: wrap;
 }
 
+.card > .cardPerfilArticleUserPageTwo > p.pSpanEmail {
+    padding: 4vmin 2vmin;
+}
+
+.card > .cardPerfilArticleUserPageTwo > p.pSpanBiography {
+    background-color: var(--grey3-color);
+    border-radius: 1vmin;
+    padding: 4vmin 2vmin;
+    overflow: hidden;
+}
 .card > .cardPerfilArticleUserPageOne > p,
-.card > .cardPerfilArticleUserPageTwo > p,
-.card > .cardPerfilArticleUserPageThree > p {
-    margin: 2vmin 2vmin;
+.card > .cardPerfilArticleUserPageTwo > p {
+    margin: 4vmin 2vmin;
 }
 
 .card > .cardPerfilArticleUserPageOne > p:first-child {
@@ -87,8 +90,7 @@
 }
 
 .card > .cardPerfilArticleUserPageOne div.stripe,
-.card > .cardPerfilArticleUserPageTwo div.stripe,
-.card > .cardPerfilArticleUserPageThree div.stripe {
+.card > .cardPerfilArticleUserPageTwo div.stripe {
     width: 100%;
     height: 0.1vmin;
     background-color: var(--blue2-color);
@@ -96,11 +98,10 @@
 }
 
 .card > .cardPerfilArticleUserPageTwo > p:not(first-child) {
-    padding: 2vmin 1vmin;
+    padding: 1vmin;
 }
 .card > .cardPerfilArticleUserPageOne > p > span,
 .card > .cardPerfilArticleUserPageTwo > p > span,
-.card > .cardPerfilArticleUserPageThree > p > span,
 .card > .cardPerfilArticleUserPageTwo > .cardNombreUserPage > p > span {
     font-weight: 600;
 }
@@ -112,9 +113,8 @@
 
 @media (min-width: 500px) {
     .card > .cardPerfilArticleUserPageOne,
-    .card > .cardPerfilArticleUserPageTwo,
-    .card > .cardPerfilArticleUserPageThree {
-        width: 70%;
+    .card > .cardPerfilArticleUserPageTwo {
+        width: 90%;
     }
 
     .card > .cardPerfilArticleUserPageTwo > .cardNombreUserPage > .imgUserPage {
@@ -138,24 +138,27 @@
     }
 
     .card > .cardPerfilArticleUserPageOne,
-    .card > .cardPerfilArticleUserPageTwo,
-    .card > .cardPerfilArticleUserPageThree {
-        padding: 2vmin;
-        margin: 4vmin 6vmin;
-        width: 40%;
-    }
-
     .card > .cardPerfilArticleUserPageTwo {
-        min-height: 75vh;
+        padding: 2vmin;
+        margin: 4vmin 0vmin;
+        width: 70%;
+        background-color: var(--grey3-color);
     }
 
     .card > .cardPerfilArticleUserPageTwo > .cardNombreUserPage > .imgUserPage {
-        width: 55%;
+        width: 45%;
+    }
+
+    .card > .cardPerfilArticleUserPageTwo > p.pSpanBiography {
+        background-color: var(--write-color);
+    }
+
+    .card > .cardPerfilArticleUserPageTwo > p.pSpanEmail {
+        padding: 0vmin 2vmin;
     }
 
     .card > .cardPerfilArticleUserPageOne,
-    .card > .cardPerfilArticleUserPageTwo,
-    .card > .cardPerfilArticleUserPageThree {
+    .card > .cardPerfilArticleUserPageTwo {
         opacity: 0;
         animation-name: secuencia;
         animation-duration: 2s;
@@ -168,10 +171,6 @@
 
     .card > .cardPerfilArticleUserPageTwo {
         animation-delay: 1s;
-    }
-
-    .card > .cardPerfilArticleUserPageThree {
-        animation-delay: 5s;
     }
 
     @keyframes secuencia {
@@ -195,12 +194,21 @@
         margin-top: 2vmin;
     }
 
-    .card > .cardPerfilArticleUserPageOne,
-    .card > .cardPerfilArticleUserPageTwo,
-    .card > .cardPerfilArticleUserPageThree {
+    .card > .cardPerfilArticleUserPageOne {
+        width: 50%;
+        border-left: 0.5vmin solid var(--grey-color);
+    }
+
+    .card > .cardPerfilArticleUserPageTwo {
+        width: 35%;
+    }
+
+    .card > .cardPerfilArticleUserPageTwo > p.pSpanBiography {
         padding: 2vmin;
-        margin: 4vmin 2vmin;
-        width: 25%;
+    }
+
+    .card > .cardPerfilArticleUserPageTwo > .cardNombreUserPage {
+        gap: 2vmin;
     }
 }
 
@@ -211,9 +219,12 @@
 */
 
 @media (min-width: 1025px) {
-    .card > .cardPerfilArticleUserPageOne,
-    .card > .cardPerfilArticleUserPageTwo,
-    .card > .cardPerfilArticleUserPageThree {
+    .card > .cardPerfilArticleUserPageOne {
+        width: 40%;
+        border-left: 0.5vmin solid var(--grey-color);
+    }
+
+    .card > .cardPerfilArticleUserPageTwo {
         width: 20%;
     }
 }

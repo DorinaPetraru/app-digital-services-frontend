@@ -70,7 +70,7 @@ export const loginUser = async ({ email, password }) => {
     return json.data;
 };
 
-export const getOwnUser = async ({ token }) => {
+export const getOwnUser = async (token) => {
     const response = await fetch(`http://localhost:4000/users`, {
         headers: {
             Authorization: token,

@@ -4,25 +4,20 @@ import { Link } from 'react-router-dom';
 import { updateServiceStatus } from '../../dbCommunication';
 import { useToken } from '../../context/TokenContext';
 import useUser from '../../hooks/useUser';
-import { useEffect } from 'react';
 
 export const OneService = ({ service, setService }) => {
     const [token] = useToken();
-    const ownUser = useOwnUser(token);
+    const { ownUser } = useOwnUser(token);
     const { user } = useUser(service.idUser);
 
-    useEffect(() => {
-        const loadComments = async () => {
-            try {
-                await updateServiceStatus(service.id, token);
-                setService({ ...service, statusService: 'resolved' });
-            } catch (error) {
-                console.error(error);
-            }
-        };
-
-        loadComments();
-    }, [service, setService, token]);
+    const handleServiceStatus = async () => {
+        try {
+            await updateServiceStatus(service.id, token);
+            setService({ ...service, statusService: 'resolved' });
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return ownUser && user ? (
         <div className="ulOneServices">
@@ -60,7 +55,10 @@ export const OneService = ({ service, setService }) => {
                 </li>
                 {user.id === ownUser.id ? (
                     <li>
-                        <button className="buttonResolved">
+                        <button
+                            onClick={handleServiceStatus}
+                            className="buttonResolved"
+                        >
                             Mark as resolved
                         </button>
                     </li>
