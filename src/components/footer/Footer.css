@@ -5,7 +5,6 @@ footer {
     text-align: center;
     background-color: var(--blue-color);
     color: var(--write-color);
-    padding: 3vmin 0;
 }
 
 footer > p {
