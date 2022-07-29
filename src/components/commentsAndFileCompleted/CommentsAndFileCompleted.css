@@ -111,6 +111,13 @@
         margin-top: 10vmin;
     }
 
+    .commentsAndFileCompleted > p {
+        background-color: var(--grey3-color);
+        text-align: center;
+        padding: 3vmin;
+        border-radius: 1vmin;
+    }
+
     .commentsAndFileCompleted > .formComments {
         margin-top: 4vmin;
     }

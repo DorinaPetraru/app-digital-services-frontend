@@ -14,7 +14,7 @@ export const UserPage = () => {
     return (
         <section className="card">
             <article
-                title="User photo logged in"
+                title="Photo of user who created the service"
                 className="cardPerfilArticleUserPageTwo"
             >
                 <figure className="cardNombreUserPage">

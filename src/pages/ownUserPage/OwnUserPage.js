@@ -14,7 +14,7 @@ export const OwnUserPage = () => {
 
     return (
         ownUser && (
-            <section className="card">
+            <section className="cardOwn">
                 <article className="cardPerfilArticleOwnUserPageOne">
                     <p>Create, solve and enjoy with</p>
                     <div className="stripe"></div>

@@ -9,6 +9,7 @@
     padding: 1vmin;
     margin-top: 3vmin;
     background-color: var(--grey3-color);
+    border-radius: 1vmin;
 }
 
 /*####  FIGURE Y DESCRIPTION OneServices ########*/
@@ -19,6 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3vmin;
 }
 
 .linkOneServices > figure > img {
@@ -111,10 +113,6 @@
     .ulOneServices {
         width: 95%;
     }
-    .linkOneServices > figure {
-        padding: 1vmin;
-        /* width: 40%; */
-    }
 }
 
 /**
@@ -153,6 +151,10 @@
     .ulOneServices {
         width: 40%;
         margin-top: 6vmin;
+    }
+
+    .linkOneServices > figure {
+        padding: 1vmin;
     }
 }
 

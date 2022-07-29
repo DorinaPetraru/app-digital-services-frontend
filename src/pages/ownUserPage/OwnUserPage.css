@@ -1,5 +1,5 @@
 /*#### BACKGROUND USER PAGE ########*/
-.card {
+.cardOwn {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -7,27 +7,27 @@
     align-items: center;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne,
-.card > .cardPerfilArticleOwnUserPageTwo,
-.card > .cardPerfilArticleOwnUserPageThree {
+.cardOwn > .cardPerfilArticleOwnUserPageOne,
+.cardOwn > .cardPerfilArticleOwnUserPageTwo,
+.cardOwn > .cardPerfilArticleOwnUserPageThree {
     width: 95%;
     min-height: 68vh;
     padding: 1vmin;
     margin: 6vmin 2vmin;
     border-radius: 1vmin;
 
-    box-shadow: inset 0 0 1vmin 0 var(--shadow-color);
+    box-shadow: inset 0 0 3vmin 0 var(--grey2-color);
 }
 
-.card > .cardPerfilArticleOwnUserPageOne:hover,
-.card > .cardPerfilArticleOwnUserPageTwo:hover,
-.card > .cardPerfilArticleOwnUserPageThree:hover {
+.cardOwn > .cardPerfilArticleOwnUserPageOne:hover,
+.cardOwn > .cardPerfilArticleOwnUserPageTwo:hover,
+.cardOwn > .cardPerfilArticleOwnUserPageThree:hover {
     transform: scale(1.1);
     transition-duration: 0.95s;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne,
-.card > .cardPerfilArticleOwnUserPageThree {
+.cardOwn > .cardPerfilArticleOwnUserPageOne,
+.cardOwn > .cardPerfilArticleOwnUserPageThree {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,33 +35,33 @@
     flex-wrap: wrap;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne > p,
-.card > .cardPerfilArticleOwnUserPageTwo > p,
-.card > .cardPerfilArticleOwnUserPageThree > p {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p,
+.cardOwn > .cardPerfilArticleOwnUserPageTwo > p,
+.cardOwn > .cardPerfilArticleOwnUserPageThree > p {
     margin: 2vmin 2vmin;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne > p:first-child {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p:first-child {
     text-align: center;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne > p > a {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p > a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDsHeader,
-.card > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDigitalHeader {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDsHeader,
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDigitalHeader {
     color: var(--blue-color);
 }
 
-.card > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDsHeader {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p > a > span.spanDsHeader {
     border-radius: 5vmin;
     box-shadow: inset 0 0 1vmin 0 var(--blue-color);
 }
 
-.card > .cardPerfilArticleOwnUserPageTwo > .cardNombreOwnUserPage {
+.cardOwn > .cardPerfilArticleOwnUserPageTwo > .cardNombreOwnUserPage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@
     margin: 4vmin;
 }
 
-.card
+.cardOwn
     > .cardPerfilArticleOwnUserPageTwo
     > .cardNombreOwnUserPage
     > .imgOwnUserPage {
@@ -81,7 +81,7 @@
     transition: all 0.3s;
 }
 
-.card
+.cardOwn
     > .cardPerfilArticleOwnUserPageTwo
     > .cardNombreOwnUserPage
     > .imgOwnUserPage:hover {
@@ -89,22 +89,26 @@
     transform: rotate(0);
 }
 
-.card > .cardPerfilArticleOwnUserPageOne div.stripe,
-.card > .cardPerfilArticleOwnUserPageTwo div.stripe,
-.card > .cardPerfilArticleOwnUserPageThree div.stripe {
+.cardOwn > .cardPerfilArticleOwnUserPageOne div.stripe,
+.cardOwn > .cardPerfilArticleOwnUserPageTwo div.stripe,
+.cardOwn > .cardPerfilArticleOwnUserPageThree div.stripe {
     width: 100%;
     height: 0.1vmin;
     background-color: var(--blue2-color);
     margin: 4vmin 0vmin;
 }
 
-.card > .cardPerfilArticleOwnUserPageTwo > p:not(first-child) {
+.cardOwn > .cardPerfilArticleOwnUserPageTwo > p:not(first-child) {
     padding: 1vmin;
 }
-.card > .cardPerfilArticleOwnUserPageOne > p > span,
-.card > .cardPerfilArticleOwnUserPageTwo > p > span,
-.card > .cardPerfilArticleOwnUserPageThree > p > span,
-.card > .cardPerfilArticleOwnUserPageTwo > .cardNombreOwnUserPage > p > span {
+.cardOwn > .cardPerfilArticleOwnUserPageOne > p > span,
+.cardOwn > .cardPerfilArticleOwnUserPageTwo > p > span,
+.cardOwn > .cardPerfilArticleOwnUserPageThree > p > span,
+.cardOwn
+    > .cardPerfilArticleOwnUserPageTwo
+    > .cardNombreOwnUserPage
+    > p
+    > span {
     font-weight: 600;
 }
 /**
@@ -114,17 +118,17 @@
 */
 
 @media (min-width: 500px) {
-    .card > .cardPerfilArticleOwnUserPageOne,
-    .card > .cardPerfilArticleOwnUserPageTwo,
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne,
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo,
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         width: 70%;
     }
 
-    .card
+    .cardOwn
         > .cardPerfilArticleOwnUserPageTwo
         > .cardNombreOwnUserPage
         > .imgOwnUserPage {
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -135,7 +139,7 @@
 */
 
 @media (min-width: 700px) {
-    .card {
+    .cardOwn {
         margin-top: 2vmin;
         display: flex;
         flex-direction: row;
@@ -143,43 +147,43 @@
         justify-content: center;
     }
 
-    .card > .cardPerfilArticleOwnUserPageOne,
-    .card > .cardPerfilArticleOwnUserPageTwo,
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne,
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo,
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         padding: 2vmin;
         margin: 4vmin 6vmin;
         width: 40%;
     }
 
-    .card > .cardPerfilArticleOwnUserPageTwo {
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo {
         min-height: 70vh;
     }
 
-    .card
+    .cardOwn
         > .cardPerfilArticleOwnUserPageTwo
         > .cardNombreOwnUserPage
         > .imgOwnUserPage {
-        width: 55%;
+        width: %;
     }
 
-    .card > .cardPerfilArticleOwnUserPageOne,
-    .card > .cardPerfilArticleOwnUserPageTwo,
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne,
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo,
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         opacity: 0;
         animation-name: secuencia;
         animation-duration: 2s;
         animation-fill-mode: forwards;
     }
 
-    .card > .cardPerfilArticleOwnUserPageOne {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne {
         animation-delay: 3s;
     }
 
-    .card > .cardPerfilArticleOwnUserPageTwo {
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo {
         animation-delay: 1s;
     }
 
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         animation-delay: 5s;
     }
 
@@ -200,13 +204,13 @@
 */
 
 @media (min-width: 900px) {
-    .card {
+    .cardOwn {
         margin-top: 2vmin;
     }
 
-    .card > .cardPerfilArticleOwnUserPageOne,
-    .card > .cardPerfilArticleOwnUserPageTwo,
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne,
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo,
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         padding: 2vmin;
         margin: 4vmin 2vmin;
         width: 25%;
@@ -220,9 +224,9 @@
 */
 
 @media (min-width: 1025px) {
-    .card > .cardPerfilArticleOwnUserPageOne,
-    .card > .cardPerfilArticleOwnUserPageTwo,
-    .card > .cardPerfilArticleOwnUserPageThree {
+    .cardOwn > .cardPerfilArticleOwnUserPageOne,
+    .cardOwn > .cardPerfilArticleOwnUserPageTwo,
+    .cardOwn > .cardPerfilArticleOwnUserPageThree {
         width: 20%;
     }
 }

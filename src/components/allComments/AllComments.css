@@ -5,6 +5,11 @@ section.sectionAllComments {
     min-height: 30vmin;
     padding: 6vmin 0.2vmin 5vmin 5vmin;
     margin-bottom: 10vmin;
+}
+
+section.sectionAllComments,
+p.pAllComments {
+    border-radius: 1vmin;
     background-color: var(--grey3-color);
 }
 
@@ -24,7 +29,6 @@ ul.ulAllCommentFileCompleted {
 p.pAllComments {
     width: 90%;
     height: 20vmin;
-    background-color: var(--grey3-color);
     padding-top: 4vmin;
     text-align: center;
     text-transform: uppercase;
