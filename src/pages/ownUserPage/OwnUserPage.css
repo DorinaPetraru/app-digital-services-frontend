@@ -74,7 +74,7 @@
     > .cardNombreOwnUserPage
     > .imgOwnUserPage {
     border-radius: 50%;
-    width: 75%;
+    width: 55%;
     padding: 0.1vmin;
     box-shadow: 0.5vmin 1.4vmin 0.5vmin var(--blue2-color);
     transform: rotate(-30deg);
@@ -121,7 +121,7 @@
     .cardOwn > .cardPerfilArticleOwnUserPageOne,
     .cardOwn > .cardPerfilArticleOwnUserPageTwo,
     .cardOwn > .cardPerfilArticleOwnUserPageThree {
-        width: 70%;
+        width: 80%;
     }
 
     .cardOwn
@@ -152,7 +152,7 @@
     .cardOwn > .cardPerfilArticleOwnUserPageThree {
         padding: 2vmin;
         margin: 4vmin 6vmin;
-        width: 40%;
+        width: 70%;
     }
 
     .cardOwn > .cardPerfilArticleOwnUserPageTwo {
@@ -163,7 +163,7 @@
         > .cardPerfilArticleOwnUserPageTwo
         > .cardNombreOwnUserPage
         > .imgOwnUserPage {
-        width: %;
+        width: 40%;
     }
 
     .cardOwn > .cardPerfilArticleOwnUserPageOne,

@@ -26,8 +26,13 @@ export const OwnUserPage = () => {
                         </Link>
                     </p>
                     <p>
-                        Visit our Home Page and discover a variety of services
-                        both to solve and ideas to create new services.
+                        <p className="pLink">
+                            <Link to="/">
+                                <p className=""> Visit our HomePage</p>
+                            </Link>
+                        </p>
+                        and discover a variety of services both to solve and
+                        ideas to create new services.
                     </p>
                     <div className="stripe"></div>
                     <p>
