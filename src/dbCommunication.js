@@ -1,6 +1,8 @@
 //Éstas funciones llevan a cabo la comunicación con la base de datos
 export const getAllServices = async () => {
-    const response = await fetch('http://localhost:4000/services');
+    const response = await fetch(
+        'https://app-digital-service.herokuapp.com/services'
+    );
 
     const { data } = await response.json();
 
@@ -12,7 +14,9 @@ export const getAllServices = async () => {
 };
 
 export const getOneService = async (id) => {
-    const response = await fetch(`http://localhost:4000/services/${id}`);
+    const response = await fetch(
+        `https://app-digital-service.herokuapp.com/services/${id}`
+    );
 
     const { data } = await response.json();
 
@@ -38,11 +42,14 @@ export const registerUser = async ({
     formData.append('photo', photo);
     formData.append('password', password);
 
-    const response = await fetch('http://localhost:4000/users', {
-        method: 'POST',
-        mode: 'cors',
-        body: formData,
-    });
+    const response = await fetch(
+        'https://app-digital-service.herokuapp.com/users',
+        {
+            method: 'POST',
+            mode: 'cors',
+            body: formData,
+        }
+    );
 
     const json = await response.json();
 
@@ -52,14 +59,17 @@ export const registerUser = async ({
 };
 
 export const loginUser = async ({ email, password }) => {
-    const response = await fetch('http://localhost:4000/login', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+        'https://app-digital-service.herokuapp.com/login',
+        {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        }
+    );
 
     const json = await response.json();
 
@@ -71,11 +81,14 @@ export const loginUser = async ({ email, password }) => {
 };
 
 export const getOwnUser = async (token) => {
-    const response = await fetch(`http://localhost:4000/users`, {
-        headers: {
-            Authorization: token,
-        },
-    });
+    const response = await fetch(
+        `https://app-digital-service.herokuapp.com/users`,
+        {
+            headers: {
+                Authorization: token,
+            },
+        }
+    );
 
     const { data } = await response.json();
 
@@ -87,7 +100,9 @@ export const getOwnUser = async (token) => {
 };
 
 export const getUser = async (id) => {
-    const response = await fetch(`http://localhost:4000/users/${id}`);
+    const response = await fetch(
+        `https://app-digital-service.herokuapp.com/users/${id}`
+    );
 
     const json = await response.json();
 
@@ -105,14 +120,17 @@ export const createNewService = async ({ title, description, file, token }) => {
     formData.append('description', description);
     formData.append('file', file);
 
-    const response = await fetch('http://localhost:4000/services', {
-        method: 'POST',
-        mode: 'cors',
-        body: formData,
-        headers: {
-            Authorization: token,
-        },
-    });
+    const response = await fetch(
+        'https://app-digital-service.herokuapp.com/services',
+        {
+            method: 'POST',
+            mode: 'cors',
+            body: formData,
+            headers: {
+                Authorization: token,
+            },
+        }
+    );
 
     const json = await response.json();
 
@@ -123,7 +141,7 @@ export const createNewService = async ({ title, description, file, token }) => {
 
 export const getAllComments = async (idService, token) => {
     const response = await fetch(
-        `http://localhost:4000/services/${idService}/comments`,
+        `https://app-digital-service.herokuapp.com/services/${idService}/comments`,
         {
             headers: {
                 Authorization: token,
@@ -152,7 +170,7 @@ export const createCommentsAndFileCompleted = async ({
     formData.append('fileCompleted', fileCompleted);
 
     const response = await fetch(
-        `http://localhost:4000/services/${idService}/filecompleted`,
+        `https://app-digital-service.herokuapp.com/services/${idService}/filecompleted`,
         {
             method: 'POST',
             mode: 'cors',
@@ -173,7 +191,7 @@ export const createCommentsAndFileCompleted = async ({
 
 export const updateServiceStatus = async (idService, token) => {
     const response = await fetch(
-        `http://localhost:4000/services/${idService}/resolved`,
+        `https://app-digital-service.herokuapp.com/services/${idService}/resolved`,
         {
             method: 'PUT',
             mode: 'cors',
