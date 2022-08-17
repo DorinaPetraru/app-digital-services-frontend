@@ -11,8 +11,8 @@ const Header = () => {
     return (
         <header>
             <p>
-                <Link className="link" to="/">
-                    <span className="spanDsHeader">DS</span>
+                <Link className="link" to="/" title="Home">
+                    <span className="spanDsHeader">DS ↩</span>
                     <span className="spanDigitalHeader">Digital</span>
                     <span className="spanServicesHeader">Services</span>
                 </Link>

@@ -45,7 +45,7 @@ header > p > .link {
 
 .spanDsHeader {
     margin: 1vmin;
-    padding: 2vmin;
+    padding: 1.5vmin;
     cursor: pointer;
     border-radius: 5vmin;
     color: var(--grey3-color);

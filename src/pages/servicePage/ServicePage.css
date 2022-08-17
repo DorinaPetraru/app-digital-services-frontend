@@ -22,7 +22,11 @@
 
 /*############## btnEffect #############*/
 .servicePage > a > button.btnEffect {
-    font-weight: 600;
+    font-weight: 900;
     color: var(--blue-color);
     margin-bottom: 10vmin;
+}
+
+.startButton > a.topOfPage > button.btnEffect {
+    font-weight: 900;
 }

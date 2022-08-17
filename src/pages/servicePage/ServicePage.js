@@ -50,7 +50,7 @@ export const ServicePage = () => {
                 <button className="btnEffect">Go to HomePage</button>
             </Link>
             <div className="startButton">
-                <a href="#start">
+                <a href="#start" className="topOfPage">
                     <button
                         className="btnEffect"
                         title="Go to the top of this page"

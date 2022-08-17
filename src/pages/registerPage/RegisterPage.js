@@ -38,7 +38,6 @@ export const RegisterPage = () => {
                 <fieldset>
                     <label htmlFor="name"></label>
                     <input
-                        // value={name}
                         type="text"
                         id="name"
                         name="name"
@@ -51,7 +50,6 @@ export const RegisterPage = () => {
                 <fieldset>
                     <label htmlFor="email"></label>
                     <input
-                        // value={email}
                         type="email"
                         id="email"
                         name="email"
@@ -64,7 +62,6 @@ export const RegisterPage = () => {
                 <fieldset>
                     <label htmlFor="biography"></label>
                     <textarea
-                        // value={biography}
                         id="biography"
                         name="biography"
                         maxLength="250"
@@ -77,7 +74,6 @@ export const RegisterPage = () => {
                 <fieldset>
                     <label htmlFor="photo"></label>
                     <input
-                        //  value={photo}
                         type="file"
                         id="photo"
                         name="photo"
@@ -100,7 +96,6 @@ export const RegisterPage = () => {
                 <fieldset>
                     <label htmlFor="password"></label>
                     <input
-                        // value={password}
                         type="password"
                         id="password"
                         name="password"
